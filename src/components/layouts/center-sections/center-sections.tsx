@@ -18,15 +18,17 @@ export const StatsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+    <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50 lg:px-16 md:px-10 px-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center">
-              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#4F7DF3] mb-2">
+              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-Outfit font-bold text-[#4F7DF3] mb-2">
                 {stat.number}
               </h3>
-              <p className="text-lg text-gray-600 font-medium">{stat.label}</p>
+              <p className="text-lg md:text-base font-normal text-[#4B5563] font-Outfit ">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>

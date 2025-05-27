@@ -21,7 +21,7 @@ const PageRender = () => {
     "departments",
     "levels",
     "principal-officer",
-    "about",
+    "about-us",
     "our-courses",
     "contact-us",
     "enroll-now",

@@ -1,6 +1,11 @@
+import Footer from "../../components/footer";
 import AboutSection from "../../components/layouts/about-section";
 import BlogSection from "../../components/layouts/blog/blog-section";
-import { WhyChooseSection } from "../../components/layouts/center-sections/center-sections";
+import {
+  StatsSection,
+  WhyChooseSection,
+} from "../../components/layouts/center-sections/center-sections";
+import CTASection from "../../components/layouts/cta-section";
 import { HomeHero } from "../../components/layouts/heros";
 import OurServices from "../../components/layouts/our-services";
 import TrustedBy from "../../components/layouts/trusted-by";
@@ -25,6 +30,15 @@ const Home = () => {
       </section>
       <section>
         <BlogSection showAll={false} />
+      </section>
+      <section>
+        <CTASection />
+      </section>
+      <section>
+        <StatsSection />
+      </section>
+      <section>
+        <Footer />
       </section>
     </div>
   );

@@ -6,7 +6,7 @@ interface ButtonProps {
   onClick?: () => void;
   to?: string;
   className?: string;
-  variant?: "primary" | "secondary" | "outline" | "category";
+  variant?: "primary" | "secondary" | "outline" | "category" | "more";
   size?: "sm" | "md" | "lg" | "xl";
   isActive?: boolean;
   disabled?: boolean;
@@ -44,6 +44,7 @@ const Button = ({
   const variantClasses = {
     primary:
       "bg-[#4F7DF3] hover:bg-[#3B6BF1] font-Outfit text-2xl font-semibold text-white font-medium rounded-md transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
+    more: "bg-[#fff] hover:bg-[#4F7DF3] hover:text-[#fff] text-[#4F7DF3] font-Outfit text-2xl font-semibold font-medium rounded-md transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
     secondary:
       " border-2 border-[#4F7DF3] text-[#fff] hover:bg-[#fff] bg-[#4F7DF3] hover:text-[#4F7DF3] font-Outfit shadow-md font-medium rounded-full transition-all duration-200",
     outline:
