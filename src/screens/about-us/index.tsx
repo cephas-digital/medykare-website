@@ -1,8 +1,10 @@
 import { AboutHero } from "../../components/layouts/heros";
+import Navbar from "../../components/navbar";
 
 const AboutUsPage = () => {
   return (
     <div>
+      <Navbar />
       <section>
         <AboutHero />
       </section>
