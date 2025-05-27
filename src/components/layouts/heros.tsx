@@ -1,0 +1,446 @@
+import { FaHeart, FaHeartbeat } from "react-icons/fa";
+
+import homebg from "../../assets/images/homebg.png";
+import aboutbg from "../../assets/images/aboutbg.png";
+import heroCollage from "../../assets/images/herocollage.png";
+import aboutPharmacy from "../../assets/images/aboutimage.png";
+import Button from "../ui/buttons";
+import { SearchInput } from "../ui/inputs";
+import hearticon from "../../assets/images/hearticon.png";
+
+const HealthMattersTag = () => (
+  <div className="inline-flex items-center gap-2 bg-[#B4B4B4] border border-[#FFFFFF40] font-Outfit text-2xl font-light bg-opacity-50 text-white px-4 py-2 rounded-full mb-6">
+    <span className="text-sm font-medium">Health Matters</span>
+    {/* <FaHeartbeat className="text-blue-400 text-sm" /> */}
+    <img className=" w-10 h-6" src={hearticon} alt="" />
+  </div>
+);
+
+export const HomeHero = () => {
+  return (
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat relative lg:px-16 md:px-10 px-5 mt-20"
+      style={{ backgroundImage: `url(${homebg})` }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 flex items-center min-h-screen">
+        <div className="grid grid-cols-1 lg:flex gap-8 lg:gap-5 items-center lg:justify-between w-full">
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            <HealthMattersTag />
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold  text-white font-Outfit mb-6 leading-tight">
+              Healthcare at Your Fingertips
+            </h1>
+            <p className=" lg:text-xl md:text-xl text-base font-light text-gray-200 font-Outfit mb-8 max-w-lg mx-auto lg:mx-0">
+              Connect with licensed medical professionals 24/7 from the comfort
+              of your home
+            </p>
+            <Button variant="primary" size="lg" to="/appointment">
+              Book Appointment Now
+            </Button>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-full max-w-md lg:max-w-lg">
+              <img
+                src={heroCollage || "/placeholder.svg"}
+                alt="Healthcare professionals and medical services"
+                className=" lg:w-[400px] lg:h-[400px] w-full  h-auto rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const AboutHero = () => {
+  return (
+    <div
+      className="min-h-[60vh] bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: `url(${aboutbg})` }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 flex items-center min-h-[60vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            <HealthMattersTag />
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              Learn About US
+            </h1>
+            <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
+              Tempor ut aliquet faucibus lacus lectus turpis. Neque risus
+              bibendum ut ac quis dapibus.
+            </p>
+            <Button variant="primary" size="lg" to="/appointment">
+              Book Appointment Now
+            </Button>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-full max-w-md lg:max-w-lg">
+              <img
+                src={aboutPharmacy || "/placeholder.svg"}
+                alt="Healthcare professionals in pharmacy setting"
+                className="w-full h-auto rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const ServiceHero = () => {
+  return (
+    <div className="min-h-[70vh] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+      {/* Background ellipse shadows */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 flex items-center min-h-[70vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            <HealthMattersTag />
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <span className="text-blue-400">One Step Solution</span>
+              <br />
+              For All Your Dietary Needs.
+            </h1>
+            <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
+              Tempor ut aliquet faucibus lacus lectus turpis.
+              <br />
+              Neque risus bibendum ut ac quis dapibus.
+            </p>
+            <div className="mt-8">
+              <SearchInput placeholder="Search your product" />
+            </div>
+          </div>
+
+          {/* Right Image - Circular medical images */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md">
+              {/* Main circular images positioned */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full overflow-hidden shadow-xl">
+                  <img
+                    src="/placeholder.svg?height=160&width=160"
+                    alt="Medical professional"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-full overflow-hidden shadow-xl mt-8">
+                  <img
+                    src="/placeholder.svg?height=128&width=128"
+                    alt="Healthcare service"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-28 h-28 sm:w-36 sm:h-36 bg-white rounded-full overflow-hidden shadow-xl -mt-4">
+                  <img
+                    src="/placeholder.svg?height=144&width=144"
+                    alt="Medical consultation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const ContactHero = () => {
+  return (
+    <div className="min-h-[60vh] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+      {/* Background ellipse shadows */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 flex items-center min-h-[60vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            <HealthMattersTag />
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              Reach Out To Us Today!
+            </h1>
+            <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
+              Tempor ut aliquet faucibus lacus lectus turpis.
+              <br />
+              Neque risus bibendum ut ac quis dapibus.
+            </p>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-full max-w-md lg:max-w-lg">
+              <img
+                src="/placeholder.svg?height=400&width=500"
+                alt="Doctor on phone consultation"
+                className="w-full h-auto rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const BlogHero = () => {
+  const categories = [
+    { name: "All", active: true },
+    { name: "Weight Loss Tips", active: false },
+    { name: "Healthy Eating", active: false },
+    { name: "Fitness and Exercise", active: false },
+    { name: "Mindset and Motivation", active: false },
+    { name: "Recipes and Meal Planning", active: false },
+  ];
+
+  return (
+    <div className="min-h-[70vh] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+      {/* Background ellipse shadows */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
+          {/* Left Content */}
+          <div className="text-center lg:text-left">
+            <HealthMattersTag />
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <span className="text-blue-400">One Step Solution</span>
+              <br />
+              For All Your Dietary Needs.
+            </h1>
+            <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
+              Tempor ut aliquet faucibus lacus lectus turpis.
+              <br />
+              Neque risus bibendum ut ac quis dapibus.
+            </p>
+          </div>
+
+          {/* Right Image - Circular medical images */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full overflow-hidden shadow-xl">
+                  <img
+                    src="/placeholder.svg?height=160&width=160"
+                    alt="Medical professional"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-full overflow-hidden shadow-xl mt-8">
+                  <img
+                    src="/placeholder.svg?height=128&width=128"
+                    alt="Healthcare service"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-28 h-28 sm:w-36 sm:h-36 bg-white rounded-full overflow-hidden shadow-xl -mt-4">
+                  <img
+                    src="/placeholder.svg?height=144&width=144"
+                    alt="Medical consultation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Blog categories */}
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
+          {categories.map((category) => (
+            <Button
+              key={category.name}
+              variant="category"
+              size="sm"
+              isActive={category.active}
+            >
+              {category.name}
+            </Button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// import { FaHeart } from "react-icons/fa";
+
+// import Button from "../ui/buttons";
+// import { SearchInput } from "../ui/inputs";
+// import homebg from "../../assets/images/homebg.png";
+// import aboutbg from "../../assets/images/aboutbg.png";
+
+// const HealthMattersTag = () => (
+//   <div className="inline-flex items-center gap-2 bg-gray-700 bg-opacity-50 text-white px-4 py-2 rounded-full mb-6">
+//     <span className="text-sm font-medium">Health Matters</span>
+//     <FaHeart className="text-blue-400 text-sm" />
+//   </div>
+// );
+
+// export const HomeHero = () => {
+//   return (
+//     <div
+//       className="min-h-screen bg-cover bg-center bg-no-repeat relative"
+//       style={{ backgroundImage: `url(${homebg})` }}
+//     >
+//       <div className="absolute inset-0 "></div>
+//       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 flex items-center min-h-screen">
+//         <div className="w-full lg:w-1/2">
+//           <HealthMattersTag />
+//           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+//             Healthcare at Your Fingertips
+//           </h1>
+//           <p className="text-lg text-gray-200 mb-8 max-w-lg">
+//             Connect with licensed medical professionals 24/7 from the comfort of
+//             your home
+//           </p>
+//           <Button variant="primary" size="lg" to="/appointment">
+//             Book Appointment Now
+//           </Button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export const AboutHero = () => {
+//   return (
+//     <div
+//       className="min-h-[60vh] bg-cover bg-center bg-no-repeat relative"
+//       style={{ backgroundImage: `url(${aboutbg})` }}
+//     >
+//       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+//       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 flex items-center min-h-[60vh]">
+//         <div className="w-full lg:w-1/2">
+//           <HealthMattersTag />
+//           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+//             Learn About US
+//           </h1>
+//           <p className="text-lg text-gray-200 mb-8 max-w-lg">
+//             Tempor ut aliquet faucibus lacus lectus turpis. Neque risus bibendum
+//             ut ac quis dapibus.
+//           </p>
+//           <Button variant="primary" size="lg" to="/appointment">
+//             Book Appointment Now
+//           </Button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export const ServiceHero = () => {
+//   return (
+//     <div className="min-h-[70vh] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+//       {/* Background ellipse shadows */}
+//       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+//       <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
+
+//       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 flex items-center min-h-[70vh]">
+//         <div className="w-full lg:w-1/2">
+//           <HealthMattersTag />
+//           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+//             <span className="text-blue-400">One Step Solution</span>
+//             <br />
+//             For All Your Dietary Needs.
+//           </h1>
+//           <p className="text-lg text-gray-200 mb-8 max-w-lg">
+//             Tempor ut aliquet faucibus lacus lectus turpis.
+//             <br />
+//             Neque risus bibendum ut ac quis dapibus.
+//           </p>
+//           <div className="mt-8">
+//             <SearchInput placeholder="Search your product" />
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export const ContactHero = () => {
+//   return (
+//     <div className="min-h-[60vh] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+//       {/* Background ellipse shadows */}
+//       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+//       <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
+
+//       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 flex items-center min-h-[60vh]">
+//         <div className="w-full lg:w-1/2">
+//           <HealthMattersTag />
+//           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+//             Reach Out To Us Today!
+//           </h1>
+//           <p className="text-lg text-gray-200 mb-8 max-w-lg">
+//             Tempor ut aliquet faucibus lacus lectus turpis.
+//             <br />
+//             Neque risus bibendum ut ac quis dapibus.
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export const BlogHero = () => {
+//   const categories = [
+//     { name: "All", active: true },
+//     { name: "Weight Loss Tips", active: false },
+//     { name: "Healthy Eating", active: false },
+//     { name: "Fitness and Exercise", active: false },
+//     { name: "Mindset and Motivation", active: false },
+//     { name: "Recipes and Meal Planning", active: false },
+//   ];
+
+//   return (
+//     <div className="min-h-[70vh] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+//       {/* Background ellipse shadows */}
+//       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+//       <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
+
+//       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+//         <div className="w-full lg:w-1/2 mb-12">
+//           <HealthMattersTag />
+//           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+//             <span className="text-blue-400">One Step Solution</span>
+//             <br />
+//             For All Your Dietary Needs.
+//           </h1>
+//           <p className="text-lg text-gray-200 mb-8 max-w-lg">
+//             Tempor ut aliquet faucibus lacus lectus turpis.
+//             <br />
+//             Neque risus bibendum ut ac quis dapibus.
+//           </p>
+//         </div>
+
+//         {/* Blog categories */}
+//         <div className="flex flex-wrap gap-4">
+//           {categories.map((category) => (
+//             <Button
+//               key={category.name}
+//               variant="category"
+//               size="sm"
+//               isActive={category.active}
+//             >
+//               {category.name}
+//             </Button>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };

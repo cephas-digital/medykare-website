@@ -1,0 +1,132 @@
+@import url("typography.css");
+
+:root {
+  --primary: #002a54;
+}
+.App {
+  font-family: Neurial Grotesk, sans-serif;
+}
+.inter {
+  font-family: Inter, sans-serif;
+}
+
+.section-container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .section-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .section-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .section-container {
+    max-width: 1320px;
+  }
+}
+
+.hero-section {
+  background-color: var(--primary);
+  background-image: url("./assets/images/layover.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.about-section {
+  background-image: url("./assets/images/bubbles.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.noscroll {
+  overflow: hidden; /* Hides the scrollbar */
+  overflow-y: scroll; /* Allows vertical scrolling */
+}
+
+/* For webkit browsers (Chrome, Safari) */
+.noscroll::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+.custom-overlay {
+  @apply bg-da-blue-600 bg-opacity-40;
+}
+/* For Firefox */
+.noscroll {
+  scrollbar-width: none; /* Hides the scrollbar */
+}
+
+/* For Edge and IE */
+.noscroll {
+  -ms-overflow-style: none; /* Hides the scrollbar */
+}
+@media print {
+  body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .print-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+.printPage * {
+  font-family: "Microsoft San Serif" !important;
+}
+@media print {
+  .borderNonePrint {
+    border: none !important;
+  }
+  .hidden.printOnly {
+    display: block !important;
+  }
+  .flex.printOnlyNone {
+    display: none !important;
+  }
+  .text2Print {
+    font-size: 20px !important;
+  }
+  body {
+    font-size: 12px;
+  }
+  .page-break {
+    /* margin-top: 1rem; */
+    /* display: block; */
+    page-break-before: auto;
+    page-break-inside: avoid;
+  }
+}
+@page {
+  size: auto;
+  margin: 5mm 0;
+}
