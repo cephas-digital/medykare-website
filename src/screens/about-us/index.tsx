@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 
 const AboutUsPage = () => {
   return (
-    <div>
+    <div className=" mt-20">
       <Navbar />
       <section>
         <AboutHero />
