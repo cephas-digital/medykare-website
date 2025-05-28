@@ -4,28 +4,74 @@ import vissionimg from "../../assets/images/vissionimg.png";
 
 export const OurStorySection = () => {
   return (
-    <section className=" lg:px-16 md:px-10 px-5">
+    <section className="lg:px-16  md:px-10 px-5">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-4xl font-Outfit lg:text-3xl font-semibold text-[#031432] leading-tight">
               Our Story; From Zero To Hero
             </h2>
 
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-[#6C87AE] text-base font-Outfit leading-relaxed">
               Eget sed aliquet proin in nibh felis urna pulvinar rhoncus. Lorem
               facilisis nisl venenatis risus ultrices proin nam. Duis hendrerit
               molestudda placerat ipsum. Semper luctus vitae nunc semper felis.
             </p>
 
-            <Button size="lg">Learn More</Button>
+            <Button variant="secondary" size="lg">
+              Learn More
+            </Button>
           </div>
 
           {/* Right Content - Circular Design */}
           <div className="relative flex justify-center">
             <div className="relative w-96 h-96">
-              <img src="" alt="" />
+              {/* Central Circle with Icon */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#4F7DF3] rounded-full flex items-center justify-center shadow-2xl">
+                <FaHome className="text-white text-3xl" />
+              </div>
+
+              {/* Dotted Circle Paths */}
+              <div className="absolute inset-0 border-2 border-dashed border-gray-300 rounded-full"></div>
+              <div className="absolute -inset-8 border-2 border-dashed border-gray-300 rounded-full"></div>
+
+              {/* Orbiting Medical Professional Images */}
+              {/* Top */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
+                <img
+                  src="/placeholder.svg?height=64&width=64"
+                  alt="Medical professional"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Right */}
+              <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
+                <img
+                  src="/placeholder.svg?height=64&width=64"
+                  alt="Medical professional"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Bottom */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
+                <img
+                  src="/placeholder.svg?height=64&width=64"
+                  alt="Medical professional"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Left */}
+              <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
+                <img
+                  src="/placeholder.svg?height=64&width=64"
+                  alt="Medical professional"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -34,9 +80,41 @@ export const OurStorySection = () => {
   );
 };
 
+// export const OurStorySection = () => {
+//   return (
+//     <section className=" lg:px-16 md:px-10 px-5">
+//       <div className="container mx-auto px-6">
+//         <div className="grid lg:grid-cols-2 gap-16 items-center">
+//           {/* Left Content */}
+//           <div className="space-y-8">
+//             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+//               Our Story; From Zero To Hero
+//             </h2>
+
+//             <p className="text-gray-600 text-lg leading-relaxed">
+//               Eget sed aliquet proin in nibh felis urna pulvinar rhoncus. Lorem
+//               facilisis nisl venenatis risus ultrices proin nam. Duis hendrerit
+//               molestudda placerat ipsum. Semper luctus vitae nunc semper felis.
+//             </p>
+
+//             <Button size="lg">Learn More</Button>
+//           </div>
+
+//           {/* Right Content - Circular Design */}
+//           <div className="relative flex justify-center">
+//             <div className="relative w-96 h-96">
+//               <img src="" alt="" />
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
 export const OurVisionSection = () => {
   return (
-    <section className="py-20 lg:px-16 md:px-10 px-5 bg-white">
+    <section className="pt-20 lg:px-10 md:px-10 px-5 bg-white">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content - Image */}
