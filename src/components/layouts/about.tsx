@@ -1,9 +1,10 @@
-import { FaHome, FaStar } from "react-icons/fa";
+import { FaHandHoldingMedical, FaHome, FaStar } from "react-icons/fa";
 import Button from "../ui/buttons";
+import vissionimg from "../../assets/images/vissionimg.png";
 
 export const OurStorySection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+    <section className=" lg:px-16 md:px-10 px-5">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -24,50 +25,7 @@ export const OurStorySection = () => {
           {/* Right Content - Circular Design */}
           <div className="relative flex justify-center">
             <div className="relative w-96 h-96">
-              {/* Central Circle with Icon */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#4F7DF3] rounded-full flex items-center justify-center shadow-2xl">
-                <FaHome className="text-white text-3xl" />
-              </div>
-
-              {/* Dotted Circle Path */}
-              <div className="absolute inset-0 border-2 border-dashed border-gray-300 rounded-full"></div>
-
-              {/* Orbiting Medical Professional Images */}
-              {/* Top */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
-                <img
-                  src="/placeholder.svg?height=64&width=64"
-                  alt="Medical professional"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Right */}
-              <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
-                <img
-                  src="/placeholder.svg?height=64&width=64"
-                  alt="Medical professional"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Bottom */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
-                <img
-                  src="/placeholder.svg?height=64&width=64"
-                  alt="Medical professional"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Left */}
-              <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
-                <img
-                  src="/placeholder.svg?height=64&width=64"
-                  alt="Medical professional"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <img src="" alt="" />
             </div>
           </div>
         </div>
@@ -83,21 +41,21 @@ export const OurVisionSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content - Image */}
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="">
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src={vissionimg}
                 alt="Medical professionals consulting"
-                className="w-full h-80 object-cover"
+                className="w-full object-cover"
               />
 
               {/* Quality Badge */}
-              <div className="absolute bottom-6 left-6 bg-white rounded-2xl px-4 py-3 shadow-lg">
+              <div className="absolute bottom-24 right-6 bg-white rounded-2xl px-4 py-3 shadow-lg">
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-[#4F7DF3] rounded-full flex items-center justify-center">
-                    <FaStar className="text-white text-sm" />
+                    <FaHandHoldingMedical className="text-white text-sm" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">
+                    <p className="text-base font-Outfit font-medium text-[#031432]">
                       Quality over Quantity
                     </p>
                     <div className="flex space-x-1">
@@ -113,18 +71,20 @@ export const OurVisionSection = () => {
 
           {/* Right Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-Outfit text-[#031432] font-semibold leading-tight">
               Our Vision
             </h2>
 
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-[#6C87AE] font-Outfit text-base leading-relaxed">
               Id quis in augue quis duis. Ultrices orci dolor dolor odio
               adipiscing venenatis pharetra et pulvinar. Tristique luctus nec
               odio consequat tristique. Adipiscing est eget felis porttitor
               velit. Vitae turpis semper.
             </p>
 
-            <Button size="lg">Learn More</Button>
+            <Button variant="secondary" size="lg">
+              Learn More
+            </Button>
           </div>
         </div>
       </div>

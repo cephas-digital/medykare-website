@@ -1,4 +1,7 @@
-import { OurVisionSection } from "../../components/layouts/about";
+import {
+  OurStorySection,
+  OurVisionSection,
+} from "../../components/layouts/about";
 import AboutSection from "../../components/layouts/about-section";
 import { AboutHero } from "../../components/layouts/heros";
 import Navbar from "../../components/navbar";
@@ -15,6 +18,9 @@ const AboutUsPage = () => {
       </section>
       <section>
         <OurVisionSection />
+      </section>
+      <section>
+        <OurStorySection />
       </section>
     </div>
   );
