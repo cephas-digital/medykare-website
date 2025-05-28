@@ -1,3 +1,4 @@
+import AboutSection from "../../components/layouts/about-section";
 import { AboutHero } from "../../components/layouts/heros";
 import Navbar from "../../components/navbar";
 
@@ -7,6 +8,9 @@ const AboutUsPage = () => {
       <Navbar />
       <section>
         <AboutHero />
+      </section>
+      <section>
+        <AboutSection />
       </section>
     </div>
   );

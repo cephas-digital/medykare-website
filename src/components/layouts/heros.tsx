@@ -10,7 +10,9 @@ import hearticon from "../../assets/images/hearticon.png";
 
 const HealthMattersTag = () => (
   <div className="inline-flex items-center gap-2 bg-[#B4B4B4] border border-[#FFFFFF40] font-Outfit text-2xl font-light bg-opacity-50 text-white px-4 py-2 rounded-full mb-6">
-    <span className="text-sm font-medium">Health Matters</span>
+    <span className="text-sm font-Outfit font-light lg:text-2xl md:text-2xl ">
+      Health Matters
+    </span>
     {/* <FaHeartbeat className="text-blue-400 text-sm" /> */}
     <img className=" w-10 h-6" src={hearticon} alt="" />
   </div>
@@ -59,19 +61,19 @@ export const HomeHero = () => {
 export const AboutHero = () => {
   return (
     <div
-      className="min-h-[60vh] bg-cover bg-center bg-no-repeat relative"
+      className="min-h-[80vh] bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${aboutbg})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 flex items-center min-h-[60vh]">
+      <div className="relative z-10 max-w-7xl mx-auto lg:px-24 md:px-10 px-5 lg:py-28 md:py-10 py-12 flex items-center min-h-[80vh]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <HealthMattersTag />
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
               Learn About US
             </h1>
-            <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-xl font-Outfit font-light sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
               Tempor ut aliquet faucibus lacus lectus turpis. Neque risus
               bibendum ut ac quis dapibus.
             </p>
