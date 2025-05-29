@@ -1,8 +1,9 @@
 import { FaHandHoldingMedical, FaHome, FaStar } from "react-icons/fa";
 import Button from "../ui/buttons";
 import vissionimg from "../../assets/images/vissionimg.png";
-import storyone from "../../assets/images/storyone.png";
+// import storyone from "../../assets/images/storyone.png";
 import avatone from "../../assets/images/avatone.png";
+import zeroimg from "../../assets/images/zeroimg.png";
 
 export const OurStorySection = () => {
   return (
@@ -27,19 +28,22 @@ export const OurStorySection = () => {
           </div>
 
           {/* Right Content - Circular Design */}
+
           <div className="relative flex justify-center">
-            <div className="relative w-96 h-96">
-              {/* Central Circle with Icon */}
+            <div>
+              <img src={zeroimg} alt="" />
+            </div>
+            {/* <div className="relative w-96 h-96">
+          
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#4F7DF3] rounded-full flex items-center justify-center shadow-2xl">
                 <FaHome className="text-white text-3xl" />
               </div>
 
-              {/* Dotted Circle Paths */}
+             
               <div className="absolute inset-0 border-2 border-dashed border-gray-300 rounded-full"></div>
               <div className="absolute -inset-14 border-2 border-dashed border-gray-300 rounded-full"></div>
 
-              {/* Orbiting Medical Professional Images */}
-              {/* Top */}
+          
               <div className="absolute top-0 left-1/4 transform -translate-x-full -translate-y-1/2 w-28 h-28  rounded-full  overflow-hidden">
                 <img
                   src={storyone}
@@ -48,7 +52,7 @@ export const OurStorySection = () => {
                 />
               </div>
 
-              {/* Right */}
+    
               <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
                 <img
                   src="/placeholder.svg?height=64&width=64"
@@ -57,7 +61,7 @@ export const OurStorySection = () => {
                 />
               </div>
 
-              {/* Bottom */}
+          
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
                 <img
                   src="/placeholder.svg?height=64&width=64"
@@ -66,7 +70,7 @@ export const OurStorySection = () => {
                 />
               </div>
 
-              {/* Left */}
+    
               <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl overflow-hidden">
                 <img
                   src="/placeholder.svg?height=64&width=64"
@@ -74,7 +78,7 @@ export const OurStorySection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -225,7 +229,7 @@ export const OurWorksSpeaksSection = () => {
             <div key={testimonial.id} className="space-y-6">
               {/* Testimonial Text */}
               <div className="bg-white rounded-2xl p-8 shadow-lg">
-                <p className="text-gray-700 font-Outfit font-light text-xl leading-relaxed">
+                <p className="text-[#031432] font-Outfit font-light text-xl">
                   {testimonial.text}
                 </p>
 
@@ -242,7 +246,7 @@ export const OurWorksSpeaksSection = () => {
                     <h4 className=" text-[#3A8EF6] font-Outfit font-medium  text-xl">
                       {testimonial.name}
                     </h4>
-                    <p className="text-[#6C87AE] font-Outfit font-light text-base ">
+                    <p className="text-[#6C87AE] font-Outfit font-normal text-base ">
                       {testimonial.title}
                     </p>
                   </div>

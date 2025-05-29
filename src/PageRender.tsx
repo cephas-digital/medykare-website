@@ -22,6 +22,7 @@ const PageRender = () => {
     "levels",
     "principal-officer",
     "about-us",
+    "our-services",
     "our-courses",
     "contact-us",
     "enroll-now",

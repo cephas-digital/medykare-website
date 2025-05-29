@@ -1,31 +1,30 @@
-import { FaFlask, FaHeartbeat, FaUserMd } from "react-icons/fa";
 import Button from "../ui/buttons";
+import iconnine from "../../assets/images/iconnine.png";
+import iconten from "../../assets/images/iconten.png";
+import iconeleven from "../../assets/images/iconeleven.png";
 
 const ServicesGlance = () => {
   const services = [
     {
-      icon: FaFlask,
+      icon: iconnine,
       title: "Lab Diagnosis",
       description:
         "Egestas tellus facilisi ac facilisis arcu facilisis bibendum ultrices imperdiet. Morbi eleifend feugiat lacinia in. Metus sed adipiscing.",
       bgColor: "bg-purple-100",
-      iconColor: "text-purple-600",
     },
     {
-      icon: FaHeartbeat,
+      icon: iconten,
       title: "Medical Check Up",
       description:
         "Viverra eros neque bibendum in consectetur. At pharetra orci etiam nunc. Ut enim posuere nulla lacinia mauris risus porttitor.",
       bgColor: "bg-green-100",
-      iconColor: "text-green-600",
     },
     {
-      icon: FaUserMd,
+      icon: iconeleven,
       title: "Professional Doctor",
       description:
         "Viverra sed cras amet sociis et imperdiet mauris ut. Quam cras senectus tincidunt ipsum quam commodo sed lectus ac.",
       bgColor: "bg-blue-100",
-      iconColor: "text-blue-600",
     },
   ];
 
@@ -33,9 +32,9 @@ const ServicesGlance = () => {
     <section className="py-16 bg-white md:px-10 px-5 lg:px-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mb-12">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-semibold  font-Outfit text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-3xl font-semibold font-Outfit text-[#031432] mb-4">
               Our Services at a Glance
             </h2>
           </div>
@@ -49,37 +48,34 @@ const ServicesGlance = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 mt-10 md:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <div key={index} className="text-center">
-                {/* Icon */}
-                <div className="flex justify-center mb-6">
-                  <div
-                    className={`w-20 h-20 ${service.bgColor} rounded-2xl flex items-center justify-center`}
-                  >
-                    <IconComponent
-                      className={`text-3xl ${service.iconColor}`}
-                    />
-                  </div>
+        <div className="grid grid-cols-1 mt-14 md:grid-cols-3 gap-8 ">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className=" shadow-md p-5 rounded-lg transition-transform transform hover:scale-105"
+            >
+              <div className="flex  mb-6">
+                <div className="">
+                  <img
+                    src={service.icon}
+                    alt={service.title}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl lg:text-3xl text-[#031432] font-Outfit font-semibold mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-[#6C87AE] font-Outfit  text-left text-sm  leading-relaxed mb-6">
-                  {service.description}
-                </p>
-
-                {/* Button */}
-                <Button variant="secondary" size="lg">
-                  Learn More
-                </Button>
               </div>
-            );
-          })}
+
+              <h3 className="text-base lg:text-xl text-[#031432] text-left font-Outfit font-semibold mb-4">
+                {service.title}
+              </h3>
+              <p className="text-[#6C87AE] font-Outfit text-left text-sm leading-relaxed mb-6">
+                {service.description}
+              </p>
+
+              <Button variant="secondary" size="lg">
+                Learn More
+              </Button>
+            </div>
+          ))}
         </div>
       </div>
     </section>

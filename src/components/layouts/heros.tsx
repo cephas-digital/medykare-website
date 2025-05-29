@@ -5,8 +5,9 @@ import aboutbg from "../../assets/images/aboutbg.png";
 import heroCollage from "../../assets/images/herocollage.png";
 import aboutPharmacy from "../../assets/images/aboutimage.png";
 import Button from "../ui/buttons";
-import { SearchInput } from "../ui/inputs";
+import { SearchInput, SecSearchInput } from "../ui/inputs";
 import hearticon from "../../assets/images/hearticon.png";
+import servicehero from "../../assets/images/servicehero.png";
 
 const HealthMattersTag = () => (
   <div className="inline-flex items-center gap-2 bg-[#B4B4B4] border border-[#FFFFFF40] font-Outfit text-2xl font-light bg-opacity-50 text-white px-4 py-2 rounded-full mb-6">
@@ -100,7 +101,7 @@ export const AboutHero = () => {
 
 export const ServiceHero = () => {
   return (
-    <div className="min-h-[70vh] bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+    <div className="min-h-[70vh] bg-gradient-to-br from-gray-900 pb-16 via-blue-900 to-gray-800 relative overflow-hidden lg:px-16 md:px-10 px-5">
       {/* Background ellipse shadows */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
@@ -110,18 +111,18 @@ export const ServiceHero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <HealthMattersTag />
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              <span className="text-blue-400">One Step Solution</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+              <span className="text-[#1678F2]">One Step Solution</span>
               <br />
               For All Your Dietary Needs.
             </h1>
-            <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg text-[#fff] font-Outfit font-extralight mb-8 max-w-lg mx-auto lg:mx-0">
               Tempor ut aliquet faucibus lacus lectus turpis.
               <br />
               Neque risus bibendum ut ac quis dapibus.
             </p>
-            <div className="mt-8">
-              <SearchInput placeholder="Search your product" />
+            <div className="  ">
+              <SecSearchInput className="" placeholder="Search your product" />
             </div>
           </div>
 
@@ -129,28 +130,9 @@ export const ServiceHero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md">
               {/* Main circular images positioned */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full overflow-hidden shadow-xl">
-                  <img
-                    src="/placeholder.svg?height=160&width=160"
-                    alt="Medical professional"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-full overflow-hidden shadow-xl mt-8">
-                  <img
-                    src="/placeholder.svg?height=128&width=128"
-                    alt="Healthcare service"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-28 h-28 sm:w-36 sm:h-36 bg-white rounded-full overflow-hidden shadow-xl -mt-4">
-                  <img
-                    src="/placeholder.svg?height=144&width=144"
-                    alt="Medical consultation"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+
+              <div>
+                <img src={servicehero} alt="" />
               </div>
             </div>
           </div>
