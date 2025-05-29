@@ -23,7 +23,7 @@ const PageRender = () => {
     "principal-officer",
     "about-us",
     "our-services",
-    "our-courses",
+    "our-blogs",
     "contact-us",
     "enroll-now",
   ];

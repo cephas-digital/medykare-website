@@ -6,8 +6,8 @@ interface ButtonProps {
   onClick?: () => void;
   to?: string;
   className?: string;
-  variant?: "primary" | "secondary" | "outline" | "category" | "more";
-  size?: "sm" | "md" | "lg" | "xl";
+  variant?: "primary" | "secondary" | "outline" | "category" | "more" | "blog";
+  size?: "sm" | "md" | "lg" | "xl" | "blog";
   isActive?: boolean;
   disabled?: boolean;
 }
@@ -39,6 +39,7 @@ const Button = ({
     md: "w-[204px] h-[69px] text-sm",
     lg: "px-8 py-4 text-base",
     xl: "px-10 py-5 text-lg",
+    blog: "px-5 py-3 text-sm rounded-lg",
   };
 
   const variantClasses = {
