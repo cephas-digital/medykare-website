@@ -1,4 +1,3 @@
-"use client";
 import iconone from "../../assets/images/iconone.png";
 import icontwo from "../../assets/images/icontwo.png";
 import iconthree from "../../assets/images/iconthree.png";
