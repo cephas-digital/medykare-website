@@ -155,15 +155,16 @@ export const ContactHero = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 flex items-center min-h-[60vh]">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-12 pt-20 sm:py-20 flex items-center min-h-[60vh]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <HealthMattersTag />
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Reach Out To Us Today!
+            <h1 className="text-3xl sm:text-4xl mt-8 lg:text-5xl font-Outfit font-bold text-white mb-6 leading-relaxed">
+              Reach Out To
+              <p className=" mt-2">Us Today!</p>
             </h1>
-            <p className=" md:text-xl text-base text-[#fff] font-Outfit font-extralight mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="md:text-xl text-base text-[#fff] font-Outfit font-extralight mb-8 max-w-lg mx-auto lg:mx-0">
               Tempor ut aliquet faucibus lacus lectus turpis.
               <br />
               Neque risus bibendum ut ac quis dapibus.
