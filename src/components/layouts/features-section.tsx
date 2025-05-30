@@ -119,7 +119,11 @@ const FeaturesSection = () => {
             </h2>
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <h3 className="text-4xl lg:text-5xl font-semibold text-[#000] font-Outfit leading-tight">
+                <h3
+                  data-aos="flip-right"
+                  data-aos-duration="1500"
+                  className="text-4xl lg:text-5xl font-semibold text-[#000] font-Outfit leading-tight"
+                >
                   Calculating BMI
                   <br />
                   <div className=" flex items-center gap-2 mt-1 ">
@@ -138,7 +142,11 @@ const FeaturesSection = () => {
           <div className="col-span-12 md:col-span-6 lg:col-span-7 relative">
             <div className="space-y-12">
               {/* Food Recommendation */}
-              <div className=" items-start justify-between lg:w-[320px] lg:absolute top-[-80px] left-24">
+              <div
+                data-aos="fade-down-left"
+                data-aos-duration="1500"
+                className=" items-start justify-between lg:w-[320px] lg:absolute top-[-80px] left-24"
+              >
                 <div className="flex-shrink-0">
                   <img
                     src={foodone}
@@ -158,7 +166,11 @@ const FeaturesSection = () => {
               </div>
 
               {/* Interactive Chatbot */}
-              <div className=" items-start justify-between lg:w-[270px] lg:absolute right-0">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                className=" items-start justify-between lg:w-[270px] lg:absolute right-0"
+              >
                 <div className=" flex-shrink-0">
                   <img src={foodtwo} alt="Chatbot icon" className="w-12 h-12" />
                 </div>
@@ -173,7 +185,11 @@ const FeaturesSection = () => {
               </div>
 
               {/* Nutritional Value */}
-              <div className=" flex pt-32">
+              <div
+                data-aos="fade-up-right"
+                data-aos-duration="1500"
+                className=" flex pt-32"
+              >
                 <div className=" items-start lg:w-[270px]  justify-between max-w-md">
                   <div className=" flex-shrink-0">
                     <img

@@ -9,6 +9,8 @@ const ContactInfo = () => {
         <div className="mb-16 ">
           <div className="grid justify-center">
             <div
+              data-aos="zoom-out"
+              data-aos-duration="1500"
               className="mb-16 py-16 px-6 lg:w-[749px] lg:h-[300px] grid justify-center items-center relative overflow-hidden"
               style={{
                 backgroundImage: `url(${cont})`,
@@ -23,7 +25,11 @@ const ContactInfo = () => {
               </h3>
             </div>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-Outfit font-semibold text-[#262626] mb-6">
+          <h2
+            data-aos="flip-right"
+            data-aos-duration="1500"
+            className="text-4xl lg:text-5xl font-Outfit font-semibold text-[#262626] mb-6"
+          >
             Contact Us
           </h2>
           <p className="text-[#333333] font-light md:text-[17px] text-[15px] max-w-5xl mx-auto leading-relaxed">
@@ -39,7 +45,11 @@ const ContactInfo = () => {
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {/* Email Card */}
-              <div className="bg-[#232E43] py-10 flex justify-center items-center  rounded-lg text-center">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                className="bg-[#232E43] py-10 flex justify-center items-center  rounded-lg text-center"
+              >
                 <div className=" space-y-3">
                   <div className="flex justify-center ">
                     <div className=" flex items-center justify-center">
@@ -53,7 +63,11 @@ const ContactInfo = () => {
               </div>
 
               {/* Phone Card */}
-              <div className="bg-[#232E43] flex justify-center items-center  rounded-lg text-center">
+              <div
+                data-aos="fade-down"
+                data-aos-duration="1500"
+                className="bg-[#232E43] flex justify-center items-center  rounded-lg text-center"
+              >
                 <div className=" space-y-3">
                   <div className="flex justify-center ">
                     <div className=" flex items-center justify-center">
@@ -67,7 +81,11 @@ const ContactInfo = () => {
               </div>
 
               {/* Location Card */}
-              <div className="bg-[#232E43] flex justify-center items-center  rounded-lg text-center">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                className="bg-[#232E43] flex justify-center items-center  rounded-lg text-center"
+              >
                 <div className=" space-y-3">
                   <div className="flex justify-center ">
                     <div className="flex items-center justify-center">

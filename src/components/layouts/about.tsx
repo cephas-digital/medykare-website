@@ -7,12 +7,16 @@ import zeroimg from "../../assets/images/zeroimg.png";
 
 export const OurStorySection = () => {
   return (
-    <section className="lg:px-16  md:px-10 px-5">
+    <section className="lg:px-16 lg:mt-[-30px] md:px-10 px-5">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl font-Outfit lg:text-3xl font-semibold text-[#031432] leading-tight">
+            <h2
+              data-aos="flip-right"
+              data-aos-duration="1500"
+              className="text-4xl font-Outfit lg:text-3xl font-semibold text-[#031432] leading-tight"
+            >
               Our Story; From Zero To Hero
             </h2>
 
@@ -120,7 +124,7 @@ export const OurStorySection = () => {
 
 export const OurVisionSection = () => {
   return (
-    <section className="pt-20 lg:px-10 md:px-10 px-5 bg-white">
+    <section className="pt-10 lg:px-10 md:px-10 px-5 bg-white">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content - Image */}
@@ -133,7 +137,11 @@ export const OurVisionSection = () => {
               />
 
               {/* Quality Badge */}
-              <div className="absolute bottom-24 right-6 bg-white rounded-2xl px-4 py-3 shadow-lg">
+              <div
+                data-aos="fade-down-right"
+                data-aos-duration="1500"
+                className="absolute bottom-24 right-0 bg-white rounded-2xl px-4 py-3 shadow-lg"
+              >
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-[#4F7DF3] rounded-full flex items-center justify-center">
                     <FaHandHoldingMedical className="text-white text-sm" />
@@ -155,7 +163,11 @@ export const OurVisionSection = () => {
 
           {/* Right Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl lg:text-5xl font-Outfit text-[#031432] font-semibold leading-tight">
+            <h2
+              data-aos="flip-right"
+              data-aos-duration="1500"
+              className="text-4xl lg:text-5xl font-Outfit text-[#031432] font-semibold leading-tight"
+            >
               Our Vision
             </h2>
 
@@ -209,11 +221,15 @@ export const OurWorksSpeaksSection = () => {
   ];
 
   return (
-    <section className=" pt-40 pb-12 lg:px-16 md:px-10 px-5">
+    <section className=" pt-16 pb-12 lg:px-16 md:px-10 px-5">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl lg:text-3xl font-semibold text-[#031432] font-Outfit">
+          <h2
+            data-aos="flip-right"
+            data-aos-duration="1500"
+            className="text-4xl lg:text-3xl font-semibold text-[#031432] font-Outfit"
+          >
             Our Works Speaks
           </h2>
           <p className="text-[#6C87AE] font-Outfit text-lg max-w-3xl font-normal mx-auto leading-relaxed">
@@ -226,7 +242,12 @@ export const OurWorksSpeaksSection = () => {
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="space-y-6">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              key={testimonial.id}
+              className="space-y-6"
+            >
               {/* Testimonial Text */}
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <p className="text-[#031432] font-Outfit font-light text-xl">

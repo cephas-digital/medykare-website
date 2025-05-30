@@ -8,7 +8,7 @@ import Footer from "../../components/footer";
 
 const OurServicesPage = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 overflow-x-hidden">
       <Navbar />
       <section>
         <ServiceHero />

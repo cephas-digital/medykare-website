@@ -80,14 +80,14 @@ export const AboutHero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <HealthMattersTag />
-            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-10 leading-tight">
               Learn About US
             </h1>
-            <p className="text-xl font-Outfit font-light sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-xl font-Outfit font-extralight sm:text-lg text-gray-200 mb-10 max-w-lg mx-auto lg:mx-0">
               Tempor ut aliquet faucibus lacus lectus turpis. Neque risus
               bibendum ut ac quis dapibus.
             </p>
-            <Button variant="primary" size="lg" to="/appointment">
+            <Button variant="primary" size="lg" to="/contact-us">
               Book Appointment Now
             </Button>
           </div>
@@ -96,7 +96,7 @@ export const AboutHero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-md lg:max-w-lg">
               <img
-                src={aboutPharmacy || "/placeholder.svg"}
+                src={aboutPharmacy}
                 alt="Healthcare professionals in pharmacy setting"
                 className="animate__animated animate__shakeX w-full h-auto rounded-2xl shadow-2xl"
               />

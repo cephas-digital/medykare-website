@@ -13,7 +13,7 @@ import Navbar from "../../components/navbar";
 
 const Home = () => {
   return (
-    <div>
+    <div className=" overflow-x-hidden">
       <Navbar />
       <HomeHero />
       <section>

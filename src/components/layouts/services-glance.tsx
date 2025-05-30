@@ -34,7 +34,11 @@ const ServicesGlance = () => {
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-2 mb-12">
           <div>
-            <h2 className="text-3xl sm:text-3xl font-semibold font-Outfit text-[#031432] mb-4">
+            <h2
+              data-aos="flip-right"
+              data-aos-duration="1500"
+              className="text-3xl sm:text-3xl font-semibold font-Outfit text-[#031432] mb-4"
+            >
               Our Services at a Glance
             </h2>
           </div>
@@ -51,6 +55,8 @@ const ServicesGlance = () => {
         <div className="grid grid-cols-1 mt-14 md:grid-cols-3 gap-8 ">
           {services.map((service, index) => (
             <div
+              data-aos="fade-left"
+              data-aos-duration="1500"
               key={index}
               className=" shadow-md p-5 rounded-lg transition-transform transform hover:scale-105"
             >

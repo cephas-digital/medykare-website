@@ -7,7 +7,7 @@ import Footer from "../../components/footer";
 
 const OurBlogs = () => {
   return (
-    <div className=" mt-20">
+    <div className=" mt-20 overflow-x-hidden">
       <Navbar />
       <section>
         <BlogHero />
