@@ -11,6 +11,7 @@ import servicehero from "../../assets/images/servicehero.png";
 import contacthero from "../../assets/images/contacthero.png";
 import contimg from "../../assets/images/contimg.png";
 import { useState } from "react";
+import "animate.css";
 
 const HealthMattersTag = () => (
   <div className="inline-flex items-center gap-2 bg-[#B4B4B4] border border-[#FFFFFF40] font-Outfit text-2xl font-light bg-opacity-50 text-white px-4 py-2 rounded-full mb-6">
@@ -34,14 +35,19 @@ export const HomeHero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <HealthMattersTag />
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold  text-white font-Outfit mb-6 leading-tight">
+            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-bold  text-white font-Outfit mb-10 leading-tight">
               Healthcare at Your Fingertips
             </h1>
-            <p className=" lg:text-xl md:text-xl text-base font-light text-gray-200 font-Outfit mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className=" lg:text-xl md:text-xl text-base font-extralight text-gray-200 mb-10 font-Outfit max-w-lg mx-auto lg:mx-0">
               Connect with licensed medical professionals 24/7 from the comfort
               of your home
             </p>
-            <Button variant="primary" size="lg" to="/appointment">
+            <Button
+              variant="primary"
+              size="lg"
+              to="/contact-us"
+              className="animate__animated animate__pulse"
+            >
               Book Appointment Now
             </Button>
           </div>
@@ -50,9 +56,9 @@ export const HomeHero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-md lg:max-w-lg">
               <img
-                src={heroCollage || "/placeholder.svg"}
+                src={heroCollage}
                 alt="Healthcare professionals and medical services"
-                className=" lg:w-[400px] lg:h-[400px] w-full  h-auto rounded-2xl shadow-2xl"
+                className="animate__animated animate__shakeX lg:w-[400px] lg:h-[430px] w-full  h-auto rounded-2xl shadow-2xl"
               />
             </div>
           </div>
@@ -74,7 +80,7 @@ export const AboutHero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <HealthMattersTag />
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
               Learn About US
             </h1>
             <p className="text-xl font-Outfit font-light sm:text-lg text-gray-200 mb-8 max-w-lg mx-auto lg:mx-0">
@@ -92,7 +98,7 @@ export const AboutHero = () => {
               <img
                 src={aboutPharmacy || "/placeholder.svg"}
                 alt="Healthcare professionals in pharmacy setting"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="animate__animated animate__shakeX w-full h-auto rounded-2xl shadow-2xl"
               />
             </div>
           </div>
@@ -114,8 +120,8 @@ export const ServiceHero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <HealthMattersTag />
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
-              <span className="text-[#1678F2] font-Outfit leading-relaxed font-bold">
+            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+              <span className=" text-[#1678F2] font-Outfit leading-relaxed font-bold">
                 One Step Solution
               </span>
               <br />
@@ -138,7 +144,11 @@ export const ServiceHero = () => {
               {/* Main circular images positioned */}
 
               <div>
-                <img src={servicehero} alt="" />
+                <img
+                  className="animate__animated animate__shakeX"
+                  src={servicehero}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -160,7 +170,7 @@ export const ContactHero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <HealthMattersTag />
-            <h1 className="text-3xl sm:text-4xl mt-8 lg:text-5xl font-Outfit font-bold text-white mb-6 leading-relaxed">
+            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl mt-8 lg:text-5xl font-Outfit font-bold text-white mb-6 leading-relaxed">
               Reach Out To
               <p className=" mt-2">Us Today!</p>
             </h1>
@@ -177,7 +187,7 @@ export const ContactHero = () => {
               <img
                 src={contimg}
                 alt="Doctor on phone consultation"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="animate__animated animate__shakeX w-full h-auto rounded-2xl shadow-2xl"
               />
             </div>
           </div>
@@ -310,7 +320,7 @@ export const BlogHero = ({ className = "" }) => {
             {/* Left Content */}
             <div className="text-center lg:text-left">
               <HealthMattersTag />
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+              <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
                 <span className="text-[#1678F2] font-Outfit leading-relaxed font-bold">
                   One Step Solution
                 </span>
@@ -329,7 +339,7 @@ export const BlogHero = ({ className = "" }) => {
             <div className="flex justify-center lg:justify-end">
               <div>
                 <img
-                  className=" lg:w-[451px] lg:h-[461px]"
+                  className="animate__animated animate__shakeX lg:w-[451px] lg:h-[461px]"
                   src={contacthero}
                   alt=""
                 />
