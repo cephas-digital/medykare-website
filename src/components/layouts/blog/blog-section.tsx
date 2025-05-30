@@ -9,6 +9,10 @@ import blogavatone from "../../../assets/images/blogavatone.png";
 import blogavattwo from "../../../assets/images/blogavattwo.png";
 import blogavatthree from "../../../assets/images/blogavatthree.png";
 import blogavatfour from "../../../assets/images/blogavatfour.png";
+import blogavafive from "../../../assets/images/blogavafive.png";
+import blogavasix from "../../../assets/images/blogavasix.png";
+import blogfive from "../../../assets/images/blogfive.png";
+import blogsix from "../../../assets/images/blogsix.png";
 
 interface BlogPost {
   id: string;
@@ -104,10 +108,10 @@ const BlogSection = ({
       description:
         "Learn how to create lasting changes in your diet that support long-term health and wellness goals.",
       category: "Nutrition Tips",
-      image: "/placeholder.svg?height=192&width=320",
+      image: blogfive,
       author: {
         name: "Dr. Michael Chen",
-        avatar: "/placeholder.svg?height=40&width=40",
+        avatar: blogavafive,
       },
       date: "22 April 2023",
       readTime: "7 min read",
@@ -119,10 +123,10 @@ const BlogSection = ({
       description:
         "Understand how when you eat can be just as important as what you eat for optimal health.",
       category: "Meal Planning",
-      image: "/placeholder.svg?height=192&width=320",
+      image: blogsix,
       author: {
         name: "Lisa Rodriguez",
-        avatar: "/placeholder.svg?height=40&width=40",
+        avatar: blogavasix,
       },
       date: "21 April 2023",
       readTime: "6 min read",
@@ -133,14 +137,22 @@ const BlogSection = ({
   const blogsToShow = showAll ? allBlogs : allBlogs.slice(0, 4);
 
   return (
-    <section className="py-16 bg-white lg:px-16 md:px-10 px-5 ">
+    <section className="py-16 bg-white lg:px-16 md:px-10 px-3 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="lg:text-5xl md:text-4xl text-3xl font-Outfit font-bold text-[#262626] mb-4">
+          <h2
+            data-aos="flip-right"
+            data-aos-duration="1500"
+            className="lg:text-5xl md:text-4xl text-3xl font-Outfit font-bold text-[#262626] mb-4"
+          >
             {title}
           </h2>
-          <p className="text-[17px] text-[#333333] font-Outfit font-normal max-w-3xl mx-auto">
+          <p
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            className="text-[17px] text-[#333333] font-Outfit font-normal max-w-3xl mx-auto"
+          >
             {description}
           </p>
         </div>

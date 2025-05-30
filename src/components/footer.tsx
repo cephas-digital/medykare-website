@@ -37,13 +37,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <NewLogo />
+            <div data-aos="fade-right" data-aos-duration="1500">
+              <NewLogo />
+            </div>
+
             <p className="text-gray-400 mt-4 mb-6">
               Making healthcare accessible to everyone, everywhere.
             </p>
 
             {/* Social Links */}
-            <div className="flex gap-4">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              className="flex gap-4"
+            >
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
                 return (

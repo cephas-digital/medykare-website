@@ -90,7 +90,11 @@ const OurServices = () => {
       <div className="mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#000000] font-Outfit mb-4">
+          <h2
+            data-aos="flip-right"
+            data-aos-duration="1500"
+            className="text-3xl sm:text-4xl font-bold text-[#000000] font-Outfit mb-4"
+          >
             Our Services
           </h2>
         </div>
@@ -99,6 +103,8 @@ const OurServices = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
               key={index}
               className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >

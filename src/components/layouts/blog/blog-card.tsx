@@ -46,7 +46,11 @@ const BlogCard = ({
   };
 
   return (
-    <div className="bg-[#F4F8FF] p-10 border-[#D3EBF8] border rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      className="bg-[#F4F8FF] lg:p-10 md:p-5 p-5 border-[#D3EBF8] border rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+    >
       {/* Image */}
       <div className="relative  overflow-hidden">
         <img
@@ -72,18 +76,18 @@ const BlogCard = ({
 
         {/* Author and Meta */}
         <div className="flex items-center border border-[#D3EBF8] rounded-lg p-5 justify-between">
-          <div className="flex items-center gap-3">
+          <div className="lg:flex md:grid grid items-center gap-3">
             <img
               src={author.avatar || "/placeholder.svg?height=40&width=40"}
               alt={author.name}
               className="w-10 h-10 rounded-lg object-cover"
             />
             <div>
-              <p className=" text-[#1A1D31] font-semibold text-sm md:text-xl font-Outfit">
+              <p className=" truncate text-[#1A1D31] font-semibold text-sm md:text-xl font-Outfit">
                 {author.name}
               </p>
-              <div className="flex items-center gap-2 md:text-lg font-Outfi font-light text-xs text-[#59595A]">
-                <span>{date}</span>
+              <div className="lg:flex md:grid grid items-center gap-2 md:text-lg font-Outfi font-light text-xs text-[#59595A]">
+                <span className=" truncate">{date}</span>
                 {/* <span>•</span> */}
                 <div className="flex items-center gap-1">
                   <FaClock className="w-3 h-3 mt-[0.7px]" />
@@ -96,7 +100,7 @@ const BlogCard = ({
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-3">
+          <div className="lg:flex md:grid grid items-center gap-3">
             <button
               onClick={handleLike}
               className={`flex items-center gap-1 transition-colors bg-[#F4F8FF] border border-[#D3EBF8] p-5 rounded-lg ${
