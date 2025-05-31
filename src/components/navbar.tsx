@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-sm border-b fixed left-0 right-0 top-0 z-40  border-gray-100 py-4 lg:px-20 md:px-10 px-5">
+    <nav className="bg-white  fixed left-0 right-0 top-0 z-40  lg:py-4 md:py-5 py-5 lg:px-20 md:px-10 px-5">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <NewLogo />
 

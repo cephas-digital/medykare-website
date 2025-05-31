@@ -33,9 +33,9 @@ export const HomeHero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 flex items-center min-h-screen">
         <div className="grid grid-cols-1 lg:flex gap-8 lg:gap-5 items-center lg:justify-between w-full">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-left">
             <HealthMattersTag />
-            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-bold  text-white font-Outfit mb-10 leading-tight">
+            <h1 className="animate__animated animate__shakeX   text-6xl md:text-6xl lg:text-5xl font-bold  text-white font-Outfit mb-10 leading-tight">
               Healthcare at Your Fingertips
             </h1>
             <p className=" lg:text-xl md:text-xl text-base font-extralight text-gray-200 mb-10 font-Outfit max-w-lg mx-auto lg:mx-0">
@@ -78,10 +78,11 @@ export const AboutHero = () => {
       <div className="relative z-10 max-w-7xl mx-auto lg:px-24 md:px-10 px-5 lg:py-28 md:py-10 py-12 flex items-center min-h-[80vh]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-left">
             <HealthMattersTag />
-            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-10 leading-tight">
-              Learn About US
+            <h1 className="animate__animated animate__shakeX text-6xl md:text-6xl lg:text-5xl lg:mt-0 md:mt-4 mt-5 font-Outfit font-bold text-white mb-10 leading-tight">
+              Learn <br />
+              About US
             </h1>
             <p className="text-xl font-Outfit font-extralight sm:text-lg text-gray-200 mb-10 max-w-lg mx-auto lg:mx-0">
               Tempor ut aliquet faucibus lacus lectus turpis. Neque risus
@@ -110,17 +111,17 @@ export const AboutHero = () => {
 
 export const ServiceHero = () => {
   return (
-    <div className="min-h-[70vh] bg-gradient-to-br from-gray-900 pb-16 via-blue-900 to-gray-800 relative overflow-hidden lg:px-16 md:px-10 px-5">
+    <div className="min-h-[70vh] bg-gradient-to-br from-gray-900 lg:pb-16 md:pb-16 pb-20 via-blue-900 to-gray-800 relative overflow-hidden lg:px-16 md:px-10 px-5">
       {/* Background ellipse shadows */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 flex items-center min-h-[70vh]">
+      <div className=" z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 flex items-center min-h-[70vh]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-left relative h-full ">
             <HealthMattersTag />
-            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+            <h1 className="animate__animated animate__shakeX text-6xl md:text-6xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
               <span className=" text-[#1678F2] font-Outfit leading-relaxed font-bold">
                 One Step Solution
               </span>
@@ -133,13 +134,13 @@ export const ServiceHero = () => {
               <br />
               Neque risus bibendum ut ac quis dapibus.
             </p>
-            <div className="  ">
+            <div className=" absolute lg:left-[85px] lg:hidden md:block block ">
               <SecSearchInput className="" placeholder="Search your product" />
             </div>
           </div>
 
           {/* Right Image - Circular medical images */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end lg:mt-0 md:mt-20 mt-32">
             <div className="relative w-full max-w-md">
               {/* Main circular images positioned */}
 
@@ -153,6 +154,9 @@ export const ServiceHero = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className=" absolute bottom-16 lg:left-[85px] lg:block md:hidden hidden ">
+        <SecSearchInput className="" placeholder="Search your product" />
       </div>
     </div>
   );
@@ -168,9 +172,9 @@ export const ContactHero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-12 pt-20 sm:py-20 flex items-center min-h-[60vh]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-left">
             <HealthMattersTag />
-            <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl mt-8 lg:text-5xl font-Outfit font-bold text-white mb-6 leading-relaxed">
+            <h1 className="animate__animated animate__shakeX text-6xl md:text-6xl mt-8 lg:text-5xl font-Outfit font-bold text-white mb-6 leading-relaxed">
               Reach Out To
               <p className=" mt-2">Us Today!</p>
             </h1>
@@ -318,9 +322,9 @@ export const BlogHero = ({ className = "" }) => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:pt-16 md:pt-16 pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
             {/* Left Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-left">
               <HealthMattersTag />
-              <h1 className="animate__animated animate__shakeX text-3xl sm:text-4xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+              <h1 className="animate__animated animate__shakeX text-6xl md:text-6xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
                 <span className="text-[#1678F2] font-Outfit leading-relaxed font-bold">
                   One Step Solution
                 </span>

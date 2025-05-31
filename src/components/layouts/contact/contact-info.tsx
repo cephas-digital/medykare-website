@@ -3,7 +3,7 @@ import cont from "../../../assets/images/cont.png";
 
 const ContactInfo = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white ">
       <div className="container mx-auto text-center">
         {/* Header */}
         <div className="mb-16 ">
@@ -32,7 +32,7 @@ const ContactInfo = () => {
           >
             Contact Us
           </h2>
-          <p className="text-[#333333] font-light md:text-[17px] text-[15px] max-w-5xl mx-auto leading-relaxed">
+          <p className="text-[#333333] font-light md:text-[17px] text-[15px] max-w-5xl mx-auto leading-relaxed lg:px-0 md:px-10 px-5">
             We value your feedback, questions, and concerns at Nutritionist. Our
             dedicated team is here to assist you and provide the support you
             need on your nutritional journey. Please don't hesitate to reach out
@@ -66,7 +66,7 @@ const ContactInfo = () => {
               <div
                 data-aos="fade-down"
                 data-aos-duration="1500"
-                className="bg-[#232E43] flex justify-center items-center  rounded-lg text-center"
+                className="bg-[#232E43] flex py-10 justify-center items-center  rounded-lg text-center"
               >
                 <div className=" space-y-3">
                   <div className="flex justify-center ">
@@ -84,7 +84,7 @@ const ContactInfo = () => {
               <div
                 data-aos="fade-up"
                 data-aos-duration="1500"
-                className="bg-[#232E43] flex justify-center items-center  rounded-lg text-center"
+                className="bg-[#232E43] py-10 flex justify-center items-center  rounded-lg text-center"
               >
                 <div className=" space-y-3">
                   <div className="flex justify-center ">

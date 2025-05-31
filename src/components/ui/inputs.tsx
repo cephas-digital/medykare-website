@@ -37,13 +37,15 @@ export const SecSearchInput = ({
   className = "",
 }: InputProps) => {
   return (
-    <div className={` absolute bottom-0  ${className}`}>
+    <div
+      className={` relative bottom-0 lg:w-[800px] md:w-[800px] w-[300px]  ${className}`}
+    >
       <input
         type="text"
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="lg:w-[800px] px-6 rounded-[40px] placeholder:text-[#525252CC] placeholder:font-Outfit text-2xl h-[98px] pr-16 text-gray-700 bg-white  border-0 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 placeholder-gray-400"
+        className="lg:w-[800px] md:w-[800px] w-[300px] px-6 rounded-[40px] placeholder:text-[#525252CC] placeholder:font-Outfit lg:text-2xl md:text-2xl text-base lg:h-[98px] md:h-[98px] h-[78px] pr-16 text-gray-700 bg-white  border-0 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 placeholder-gray-400"
       />
       <button className="absolute  right-5 top-1/2 transform -translate-y-1/2 bg-[#4F7DF3] hover:bg-[#3B6BF1] text-white p-3 rounded-full transition-colors duration-200">
         <FaSearch className="text-sm" />

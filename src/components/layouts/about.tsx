@@ -7,7 +7,7 @@ import zeroimg from "../../assets/images/zeroimg.png";
 
 export const OurStorySection = () => {
   return (
-    <section className="lg:px-16 lg:mt-[-30px] md:px-10 px-5">
+    <section className="lg:px-16 lg:mt-[-30px] md:mt-20 mt-20 md:px-10 px-5 ">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -15,7 +15,7 @@ export const OurStorySection = () => {
             <h2
               data-aos="flip-right"
               data-aos-duration="1500"
-              className="text-4xl font-Outfit lg:text-3xl font-semibold text-[#031432] leading-tight"
+              className="text-3xl font-Outfit lg:text-3xl font-semibold text-[#031432] leading-tight"
             >
               Our Story; From Zero To Hero
             </h2>
@@ -166,7 +166,7 @@ export const OurVisionSection = () => {
             <h2
               data-aos="flip-right"
               data-aos-duration="1500"
-              className="text-4xl lg:text-5xl font-Outfit text-[#031432] font-semibold leading-tight"
+              className="text-3xl lg:text-5xl font-Outfit text-[#031432] font-semibold leading-tight"
             >
               Our Vision
             </h2>
@@ -228,7 +228,7 @@ export const OurWorksSpeaksSection = () => {
           <h2
             data-aos="flip-right"
             data-aos-duration="1500"
-            className="text-4xl lg:text-3xl font-semibold text-[#031432] font-Outfit"
+            className="text-3xl lg:text-3xl font-semibold text-[#031432] font-Outfit"
           >
             Our Works Speaks
           </h2>
