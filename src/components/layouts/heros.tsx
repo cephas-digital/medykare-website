@@ -81,8 +81,7 @@ export const AboutHero = () => {
           <div className="text-left">
             <HealthMattersTag />
             <h1 className="animate__animated animate__shakeX text-6xl md:text-6xl lg:text-5xl lg:mt-0 md:mt-4 mt-5 font-Outfit font-bold text-white mb-10 leading-tight">
-              Learn <br />
-              About US
+              Learn About US
             </h1>
             <p className="text-xl font-Outfit font-extralight sm:text-lg text-gray-200 mb-10 max-w-lg mx-auto lg:mx-0">
               Tempor ut aliquet faucibus lacus lectus turpis. Neque risus
@@ -121,7 +120,7 @@ export const ServiceHero = () => {
           {/* Left Content */}
           <div className="text-left relative h-full ">
             <HealthMattersTag />
-            <h1 className="animate__animated animate__shakeX text-6xl md:text-6xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+            <h1 className="animate__animated animate__shakeX text-5xl md:text-6xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
               <span className=" text-[#1678F2] font-Outfit leading-relaxed font-bold">
                 One Step Solution
               </span>
@@ -324,7 +323,7 @@ export const BlogHero = ({ className = "" }) => {
             {/* Left Content */}
             <div className="text-left">
               <HealthMattersTag />
-              <h1 className="animate__animated animate__shakeX text-6xl md:text-6xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
+              <h1 className="animate__animated animate__shakeX text-5xl md:text-6xl lg:text-5xl font-Outfit font-bold text-white mb-6 leading-tight">
                 <span className="text-[#1678F2] font-Outfit leading-relaxed font-bold">
                   One Step Solution
                 </span>
