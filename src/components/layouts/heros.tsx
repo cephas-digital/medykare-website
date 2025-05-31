@@ -383,10 +383,10 @@ export const BlogHero = ({ className = "" }) => {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`px-6 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`px-6 py-2 text-xl font-medium rounded-lg transition-all duration-200 ${
               activeCategory === category
-                ? "bg-[#2C2E54] font-Outfit md:text-base text-sm text-white shadow-lg"
-                : "font-Outfit md:text-base text-sm text-[#E6E6E6] font-semibold"
+                ? "bg-[#2C2E54] font-Outfit md:text-sm text-sm text-white shadow-lg"
+                : "font-Outfit md:text-sm text-sm text-[#E6E6E6] font-semibold"
             }`}
           >
             {category}
