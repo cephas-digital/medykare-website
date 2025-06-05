@@ -1,4 +1,3 @@
-"use client";
 import { useNavigate } from "react-router-dom";
 import { FaHeartbeat } from "react-icons/fa";
 import mendylogo from "../../assets/images/mendylogo.png";
@@ -26,6 +25,19 @@ export const NewLogo = () => {
         className="cursor-pointer flex items-center gap-2"
       >
         <img className=" w-60 h-8" src={mendylogo} alt="" />
+      </div>
+    </div>
+  );
+};
+export const DashboardLogo = () => {
+  const navigate = useNavigate();
+  return (
+    <div>
+      <div
+        onClick={() => navigate("/patient/dashboard")}
+        className="cursor-pointer flex items-center gap-2"
+      >
+        <img className=" w-60 h-7" src={mendylogo} alt="" />
       </div>
     </div>
   );

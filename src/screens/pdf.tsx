@@ -2,7 +2,7 @@ import ReactPlayer from "react-player";
 import WhiteBox, { ToolsKPIsData, WhiteBox2 } from "../components/partials/box";
 import WebsiteIcon from "../assets/icons/website.svg";
 import Mail from "../assets/icons/mail.svg";
-import { createMarkup, MapDashboardComponent } from "./dashboard";
+import { createMarkup, MapDashboardComponent } from "./dashboards";
 import { forwardRef, HTMLAttributes } from "react";
 import ChartIcon from "../assets/icons/chart.svg";
 import LogoIcon from "../assets/icons/Layer_1-2.svg";

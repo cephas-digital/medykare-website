@@ -7,7 +7,7 @@ interface ButtonProps {
   to?: string;
   className?: string;
   variant?: "primary" | "secondary" | "outline" | "category" | "more" | "blog";
-  size?: "sm" | "md" | "lg" | "xl" | "blog";
+  size?: "sm" | "md" | "lg" | "xl" | "blog" | "patient";
   isActive?: boolean;
   disabled?: boolean;
 }
@@ -40,6 +40,7 @@ const Button = ({
     lg: "px-8 py-4 text-base",
     xl: "px-10 py-5 text-lg",
     blog: "px-5 py-3 text-sm rounded-lg",
+    patient: "px-6 h-10 rounded-lg",
   };
 
   const variantClasses = {
