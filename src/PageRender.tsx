@@ -73,6 +73,8 @@ const PageRender = () => {
     "wallet-payment",
     "credit-card-payment",
     "bank-transfer-payment",
+    "add-money",
+    "add-card",
   ];
 
   const doctorPages = [
