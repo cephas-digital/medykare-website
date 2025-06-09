@@ -60,7 +60,7 @@ const Sidebar: React.FC = () => {
     },
     {
       name: "Prescriptions",
-      path: "/prescriptions",
+      path: "/patient/e-prescriptions",
       activeImage: sideiconsix,
       inactiveImage: sideiconsix,
     },
