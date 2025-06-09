@@ -1,5 +1,6 @@
 import type React from "react";
 import { FaRegClock } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 interface Appointment {
   doctorName: string;
@@ -46,6 +47,7 @@ const UpcomingAppointments: React.FC<UpcomingAppointmentsProps> = ({
     specialty: "Cardiology Consultation",
     dateTime: new Date(new Date().setHours(14, 0, 0, 0)), // Today at 2:00 PM
   };
+  const navigate = useNavigate();
 
   const displayAppointment = appointment || defaultAppointment;
 
@@ -76,7 +78,10 @@ const UpcomingAppointments: React.FC<UpcomingAppointmentsProps> = ({
           </div>
         </div>
 
-        <button className="w-full bg-[#2D5BFF] font-Outfit font-normal text-base text-white py-2 rounded-lg ">
+        <button
+          onClick={() => navigate("/patient/appointments")}
+          className="w-full bg-[#2D5BFF] font-Outfit font-normal text-base text-white py-2 rounded-lg "
+        >
           Book New Consultation
         </button>
       </div>

@@ -5,7 +5,7 @@ import PatientHeader from "../../../components/patient/header";
 import ProfileAndKyc from "../../../components/patient/profile-and-kyc";
 import UpcomingAppointments from "../../../components/patient/upcoming-appointments";
 import EPrescriptions from "../../../components/patient/e-prescriptions";
-import MedicationOrders from "../../../components/patient/medication-orders";
+import MedicationOrders from "../../../components/patient/medication/medication-orders";
 import LaboratoryTests from "../../../components/patient/laboratory-tests";
 import RecentPayments from "../../../components/patient/recent-payments";
 

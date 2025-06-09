@@ -1,5 +1,6 @@
 import type React from "react";
-import medicalicon from "../../assets/images/medicalicon.png";
+// import medicalicon from "../../assets/images/medicalicon.png";
+import { useNavigate } from "react-router";
 
 interface MedicationOrder {
   id: string;
@@ -62,6 +63,7 @@ const MedicationOrders: React.FC<MedicationOrdersProps> = ({ orders }) => {
   ];
 
   const displayOrders = orders || defaultOrders;
+  const navigate = useNavigate();
 
   return (
     <div className="bg-white p-6 ">
@@ -69,7 +71,7 @@ const MedicationOrders: React.FC<MedicationOrdersProps> = ({ orders }) => {
         <h3 className="font-Outfit font-bold text-lg text-[#000000]">
           Medication Orders
         </h3>
-        <img className=" w-6 h-6" src={medicalicon} alt="" />
+        {/* <img className=" w-6 h-6" src={medicalicon} alt="" /> */}
       </div>
       <div className="space-y-4">
         {displayOrders.map((order) => (
@@ -95,7 +97,10 @@ const MedicationOrders: React.FC<MedicationOrdersProps> = ({ orders }) => {
             </span>
           </div>
         ))}
-        <button className="w-full bg-[#24A148] font-Outfit font-normal text-base text-white py-2 rounded-lg">
+        <button
+          onClick={() => navigate("/patient/order-medications")}
+          className="w-full bg-[#24A148] font-Outfit font-normal text-base text-white py-2 rounded-lg"
+        >
           Order Medicine
         </button>
       </div>

@@ -67,11 +67,12 @@ const PageRender = () => {
     "dashboard",
     "profile",
     "appointments",
-    "lab-test",
-    "prescriptions",
-    "medications",
-    "payment",
-    "settings",
+    "order-medications",
+    "make-payment",
+    "payment-methods",
+    "wallet-payment",
+    "credit-card-payment",
+    "bank-transfer-payment",
   ];
 
   const doctorPages = [
