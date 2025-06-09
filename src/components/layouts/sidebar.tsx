@@ -66,7 +66,7 @@ const Sidebar: React.FC = () => {
     },
     {
       name: "Medications",
-      path: "/medications",
+      path: "/patient/order-medications",
       activeImage: sideiconseven,
       inactiveImage: sideiconseven,
     },
