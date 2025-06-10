@@ -76,6 +76,7 @@ const PageRender = () => {
     "add-money",
     "add-card",
     "e-prescriptions",
+    "new-prescription",
   ];
 
   const doctorPages = [

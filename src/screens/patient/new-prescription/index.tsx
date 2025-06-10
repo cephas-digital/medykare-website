@@ -49,13 +49,8 @@ const NewPrescriptionPage: React.FC = () => {
         <PatientPageTitle breadcrumb="E-Prescriptions" title="" />
 
         <div className="max-w-6xl">
-          <h2 className="text-3xl font-normal text-[#000] mb-8 font-Outfit">
-            New Prescription
-          </h2>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Left Column - Common Symptoms */}
-            <div>
+            <div className=" bg-[#F9FAFB]">
               <h3 className="text-xl font-normal text-[#000] mb-6 font-Outfit">
                 Common Symptoms
               </h3>
