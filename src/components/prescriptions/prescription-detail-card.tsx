@@ -1,6 +1,5 @@
 import type React from "react";
 import { FaDownload } from "react-icons/fa";
-import { MdDownload } from "react-icons/md";
 
 interface PrescriptionDetailCardProps {
   medicationName: string;
