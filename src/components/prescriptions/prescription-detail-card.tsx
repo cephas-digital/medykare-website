@@ -1,4 +1,5 @@
 import type React from "react";
+import { FaDownload } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 
 interface PrescriptionDetailCardProps {
@@ -58,7 +59,7 @@ const PrescriptionDetailCard: React.FC<PrescriptionDetailCardProps> = ({
         onClick={onDownload}
         className="flex items-center  w-full text-[#2D5BFF] hover:text-blue-700 transition-colors"
       >
-        <MdDownload className="w-5 h-5" />
+        <FaDownload className="w-5 h-5" />
       </button>
     </div>
   );
