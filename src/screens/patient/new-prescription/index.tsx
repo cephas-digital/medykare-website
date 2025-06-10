@@ -39,7 +39,7 @@ const NewPrescriptionPage: React.FC = () => {
 
   const handleSuccessClose = () => {
     setShowSuccess(false);
-    navigate("/patient/e-prescriptions");
+    navigate("/patient/your-prescriptions");
   };
 
   return (
@@ -49,23 +49,23 @@ const NewPrescriptionPage: React.FC = () => {
         <PatientPageTitle breadcrumb="E-Prescriptions" title="" />
 
         <div className="max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className=" bg-[#F9FAFB]">
-              <h3 className="text-xl font-normal text-[#000] mb-6 font-Outfit">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:flex gap-8 w-full">
+            <div className=" bg-[#F9FAFB] rounded-lg lg:w-[40%] p-5">
+              <h3 className="text-base font-bold text-[#000] mb-6 font-Outfit">
                 Common Symptoms
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {commonSymptoms.map((symptom, index) => (
                   <div
                     key={index}
                     onClick={() => handleSymptomToggle(symptom)}
-                    className={`p-4 rounded-lg border cursor-pointer transition-all ${
+                    className={`px-4 h-[44px] flex items-center rounded-lg cursor-pointer transition-all ${
                       selectedSymptoms.includes(symptom)
                         ? "border-[#2D5BFF] bg-blue-50"
                         : "border-gray-200 hover:border-gray-300"
                     }`}
                   >
-                    <span className="font-Outfit text-base text-[#000]">
+                    <span className="font-Inter font-normal text-base text-[#4B5563]">
                       {symptom}
                     </span>
                   </div>
@@ -74,15 +74,12 @@ const NewPrescriptionPage: React.FC = () => {
             </div>
 
             {/* Right Column - Custom Symptoms */}
-            <div>
-              <h3 className="text-xl font-normal text-[#000] mb-6 font-Outfit">
-                Write symptoms...
-              </h3>
+            <div className="lg:w-[60%]">
               <textarea
                 value={customSymptoms}
                 onChange={(e) => setCustomSymptoms(e.target.value)}
-                placeholder="Describe your symptoms in detail..."
-                className="w-full h-96 p-4 border border-gray-200 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[#2D5BFF] focus:border-transparent font-Outfit"
+                placeholder=" Write symptoms..."
+                className="w-full h-96 p-4 border border-[#F9FAFB] bg-[#F9FAFB] rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[#2D5BFF] focus:border-transparent font-Inter font-normal text-base"
               />
             </div>
           </div>
@@ -90,7 +87,7 @@ const NewPrescriptionPage: React.FC = () => {
           <div className="mt-8 flex justify-center">
             <button
               onClick={handleGeneratePrescriptions}
-              className="bg-[#2D5BFF] text-white px-8 py-3 rounded-lg font-Outfit font-normal text-base hover:bg-blue-600 transition-colors"
+              className="bg-[#2D5BFF] text-white w-96 py-3 font-Outfit font-bold text-base hover:bg-blue-600 transition-colors"
             >
               Generate Prescriptions
             </button>
