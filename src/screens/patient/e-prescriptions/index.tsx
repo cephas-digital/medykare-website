@@ -86,17 +86,20 @@ const EPrescriptionsPage: React.FC = () => {
     <DashboardLayout>
       <PatientHeader />
       <div className="p-6 space-y-6">
-        <div className="flex justify-between items-center">
-          <PatientPageTitle breadcrumb="E-Prescriptions" title="" />
+        <div className="flex justify-between items-center mb-12">
+          <div>
+            <PatientPageTitle breadcrumb="E-Prescriptions" title="" />
+          </div>
+
           <button
             onClick={handleNewPrescription}
-            className="bg-[#2D5BFF] text-white px-6 py-2 rounded-lg font-Outfit font-normal text-base hover:bg-blue-600 transition-colors"
+            className="bg-[#2D5BFF] text-white w-[220px] h-11  py-2 rounded-lg font-Outfit font-bold text-base hover:bg-blue-600 transition-colors"
           >
             New Prescription
           </button>
         </div>
 
-        <div className="max-w-7xl">
+        <div className="max-w-7xl ">
           {/* Stats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {stats.map((stat, index) => (
