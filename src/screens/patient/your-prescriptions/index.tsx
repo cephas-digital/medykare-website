@@ -73,13 +73,9 @@ const YourPrescriptionsPage: React.FC = () => {
     <DashboardLayout>
       <PatientHeader />
       <div className="p-6 space-y-6">
-        <PatientPageTitle breadcrumb="E-Prescriptions" title="" />
+        <PatientPageTitle breadcrumb="Your Prescription" title="" />
 
         <div className="max-w-7xl">
-          <h2 className="text-3xl font-normal text-[#000] mb-8 font-Outfit">
-            Your Prescription
-          </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {prescriptions.map((prescription, index) => (
               <PrescriptionDetailCard
