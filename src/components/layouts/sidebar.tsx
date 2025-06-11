@@ -72,13 +72,13 @@ const Sidebar: React.FC = () => {
     },
     {
       name: "Payment",
-      path: "/payment",
+      path: "/patient/payment-methods",
       activeImage: sideiconeight,
       inactiveImage: sideiconeight,
     },
     {
       name: "Settings",
-      path: "/settings",
+      path: "/patient/settings",
       activeImage: sideiconnine,
       inactiveImage: sideiconnine,
     },

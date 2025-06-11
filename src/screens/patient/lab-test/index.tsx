@@ -1,12 +1,13 @@
 import type React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { MdScience } from "react-icons/md";
+
 import PatientPageTitle from "../../../components/patient/patient-page-title";
 import DashboardLayout from "../../../components/layouts/dashboard-layout";
 import PatientHeader from "../../../components/patient/header";
 import { FaHouseChimney } from "react-icons/fa6";
 import { FaClinicMedical } from "react-icons/fa";
+import { RiMicroscopeFill } from "react-icons/ri";
 
 interface Test {
   id: string;
@@ -32,19 +33,19 @@ const LabTestPage: React.FC = () => {
       id: "complete-blood-count",
       name: "Complete Blood Count",
       price: "$49",
-      icon: MdScience,
+      icon: RiMicroscopeFill,
     },
     {
       id: "diabetes-screening",
       name: "Diabetes Screening",
       price: "$49",
-      icon: MdScience,
+      icon: RiMicroscopeFill,
     },
     {
       id: "thyroid-profile",
       name: "Thyroid Profile",
       price: "$49",
-      icon: MdScience,
+      icon: RiMicroscopeFill,
     },
   ];
 
@@ -94,11 +95,11 @@ const LabTestPage: React.FC = () => {
   return (
     <DashboardLayout>
       <PatientHeader />
-      <div className="p-6 space-y-6">
+      <div className="p-6 ">
         <PatientPageTitle breadcrumb="Laboratory Test" title="" />
 
         <div className="">
-          <div className=" max-w-md">
+          <div className=" max-w-md mb-16">
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div
                 onClick={() => setSelectedCollection("home")}
@@ -165,20 +166,20 @@ const LabTestPage: React.FC = () => {
               const IconComponent = test.icon;
               return (
                 <div key={test.id} className="">
-                  <div className="flex flex-col items-center mb-4">
-                    <div className="w-12 h-12 bg-[#2D5BFF] rounded-lg flex items-center justify-center mb-3">
-                      <IconComponent className="w-6 h-6 text-white" />
+                  <div className="flex flex-col  mb-4">
+                    <div className="w-12 h-12 flex items-center mb-3">
+                      <IconComponent className="w-10 h-10 text-[#2563EB]" />
                     </div>
-                    <h3 className="font-normal text-base text-[#000] mb-2 font-Outfit">
+                    <h3 className="font-semibold text-base text-[#111827] mb-2 font-Outfit">
                       {test.name}
                     </h3>
-                    <p className="text-sm text-gray-600 mb-4 font-Outfit">
+                    <p className="text-base text-[#4B5563] font-Inter font-normal mb-4 ">
                       Starting from {test.price}
                     </p>
                   </div>
                   <button
                     onClick={() => handleBookNow(test.id)}
-                    className="w-full border border-[#2D5BFF] text-[#2D5BFF] py-2 rounded-lg font-normal font-Inter text-sm hover:bg-blue-50 transition-colors"
+                    className="w-full border border-[#2563EB] font-Outfit font-normal text-base text-[#2D5BFF] py-2 rounded-lg  hover:bg-blue-50 transition-colors"
                   >
                     Book Now
                   </button>
@@ -188,12 +189,12 @@ const LabTestPage: React.FC = () => {
           </div>
 
           {/* Recent Lab Results */}
-          <div>
-            <h3 className="text-xl font-normal text-[#000] mb-6 font-Outfit">
+          <div className="">
+            <h3 className="text-base font-normal text-[#000] mb-6 font-Outfit">
               Recent Lab Results
             </h3>
             <div className="bg-white rounded-lg overflow-hidden">
-              <div className="grid grid-cols-4 gap-4 p-4 bg-gray-50 text-sm font-normal text-gray-600 font-Outfit">
+              <div className="grid grid-cols-4 gap-4 p-4  text-base font-normal text-[#4B5563] font-Outfit">
                 <span>Test Name</span>
                 <span>Date</span>
                 <span>Status</span>
@@ -205,14 +206,14 @@ const LabTestPage: React.FC = () => {
                     key={index}
                     className="grid grid-cols-4 gap-4 p-4 items-center"
                   >
-                    <span className="font-Outfit text-[#000]">
+                    <span className="font-Inter font-normal text-base text-[#000]">
                       {result.testName}
                     </span>
-                    <span className="font-Outfit text-gray-600">
+                    <span className="font-Inter font-normal text-base text-[#4B5563]">
                       {result.date}
                     </span>
                     <span
-                      className={`inline-flex px-2 py-1 rounded-full text-xs font-normal font-Outfit ${getStatusColor(
+                      className={`inline-flex px-2 py-1 w-24 text-center rounded-full font-Inter font-normal text-sm ${getStatusColor(
                         result.status
                       )}`}
                     >
@@ -220,7 +221,7 @@ const LabTestPage: React.FC = () => {
                     </span>
                     <button
                       onClick={() => handleViewResult(result.testName)}
-                      className="text-[#2D5BFF] font-normal font-Outfit hover:underline text-left text-sm"
+                      className="text-[#16A34A] font-normal font-Inter hover:underline text-left text-sm"
                     >
                       View result
                     </button>

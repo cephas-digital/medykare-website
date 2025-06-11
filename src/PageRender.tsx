@@ -79,6 +79,8 @@ const PageRender = () => {
     "new-prescription",
     "your-prescriptions",
     "lab-test",
+    "nearby-laboratories",
+    "lab-results",
   ];
 
   const doctorPages = [

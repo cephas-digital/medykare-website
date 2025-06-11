@@ -99,7 +99,7 @@ const PaymentMethodsPage: React.FC = () => {
                 <div className="text-3xl font-normal mb-4 font-Outfit">
                   $1,234.56
                 </div>
-                <div className="text-sm opacity-90 mb-4 font-Outfit">
+                <div className="text-sm opacity-90 mb-5 font-Outfit mt-10">
                   Wallet ID: 0000011122
                 </div>
                 <button
@@ -114,44 +114,12 @@ const PaymentMethodsPage: React.FC = () => {
                 </button>
               </div>
 
-              {/* Payment Method Selection */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    id="credit-card"
-                    name="payment-method"
-                    value="credit-card"
-                    checked={selectedPaymentMethod === "credit-card"}
-                    onChange={(e) => setSelectedPaymentMethod(e.target.value)}
-                    className="w-4 h-4 text-[#2D5BFF]"
-                  />
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-5 bg-gray-300 rounded"></div>
-                    <span className="font-Outfit">
-                      Credit Card ending in 3333
-                    </span>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() =>
-                    navigate(
-                      `/patient/add-card?medication=${medication}&amount=${amount}`
-                    )
-                  }
-                  className="text-[#2D5BFF] font-normal font-Outfit hover:underline"
-                >
-                  Add New Card
-                </button>
-              </div>
-
-              <button
+              {/* <button
                 onClick={handlePayment}
                 className="w-full bg-[#2D5BFF] text-white py-3 rounded-lg font-normal font-Inter hover:bg-blue-600 transition-colors"
               >
                 Pay ${amount}
-              </button>
+              </button> */}
             </div>
 
             {/* Right Column - Credit Card & Transactions */}
@@ -169,34 +137,64 @@ const PaymentMethodsPage: React.FC = () => {
                   <span>01/28</span>
                 </div>
               </div>
-
-              {/* Transaction History */}
-              <div>
-                <div className="grid grid-cols-4 gap-4 text-sm font-normal text-gray-600 mb-4 font-Outfit">
-                  <span>Type</span>
-                  <span>Purchase for</span>
-                  <span>Transaction date</span>
-                  <span>Actions</span>
+              {/* Payment Method Selection */}
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <input
+                    type="radio"
+                    id="credit-card"
+                    name="payment-method"
+                    value="credit-card"
+                    checked={selectedPaymentMethod === "credit-card"}
+                    onChange={(e) => setSelectedPaymentMethod(e.target.value)}
+                    className="w-4 h-4 text-[#2D5BFF]"
+                  />
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-5 bg-gray-300 rounded"></div>
+                    <span className="font-Outfit text-base font-normal text-[#000]">
+                      Credit Card ending in 3333
+                    </span>
+                  </div>
                 </div>
-                <div className="space-y-3">
-                  {transactions.map((transaction, index) => (
-                    <div
-                      key={index}
-                      className="grid grid-cols-4 gap-4 text-sm py-2 border-b border-gray-100"
-                    >
-                      <span className="font-Outfit">{transaction.type}</span>
-                      <span className="font-Outfit">
-                        {transaction.purchase}
-                      </span>
-                      <span className="font-Outfit">{transaction.date}</span>
-                      <button className="text-[#2D5BFF] font-normal font-Outfit hover:underline text-left">
-                        View
-                      </button>
-                    </div>
-                  ))}
+
+                <div className=" justify-center items-center flex">
+                  <button
+                    onClick={() =>
+                      navigate(
+                        `/patient/add-card?medication=${medication}&amount=${amount}`
+                      )
+                    }
+                    className="text-[#2D5BFF] font-bold font-Inter text-base hover:underline"
+                  >
+                    Add New Card
+                  </button>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        {/* Transaction History */}
+        <div>
+          <div className="grid grid-cols-4 gap-4 text-sm font-normal text-gray-600 mb-4 font-Outfit">
+            <span>Type</span>
+            <span>Purchase for</span>
+            <span>Transaction date</span>
+            <span>Actions</span>
+          </div>
+          <div className="space-y-3">
+            {transactions.map((transaction, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-4 gap-4 text-sm py-2 border-b border-gray-100"
+              >
+                <span className="font-Outfit">{transaction.type}</span>
+                <span className="font-Outfit">{transaction.purchase}</span>
+                <span className="font-Outfit">{transaction.date}</span>
+                <button className="text-[#2D5BFF] font-normal font-Outfit hover:underline text-left">
+                  View
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </div>
