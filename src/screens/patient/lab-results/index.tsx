@@ -5,6 +5,8 @@ import PatientPageTitle from "../../../components/patient/patient-page-title";
 import DashboardLayout from "../../../components/layouts/dashboard-layout";
 import PatientHeader from "../../../components/patient/header";
 import iconnineteen from "../../../assets/images/iconnineteen.png";
+import icontwenty from "../../../assets/images/icontwenty.png";
+import { IoDownloadOutline } from "react-icons/io5";
 
 interface LabResult {
   name: string;
@@ -63,7 +65,7 @@ const LabResultsPage: React.FC = () => {
 
         <div className="max-w-xl">
           {/* New Results Notification */}
-          <div className="bg-white rounded-lg p-6 mb-8">
+          <div className="bg-white rounded-lg p-6 ">
             <div className="flex items-start justify-between">
               <div className="items-start ">
                 <div>
@@ -85,22 +87,28 @@ const LabResultsPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className=" flex justify-between items-center p-6">
-            <p className="text-sm text-[#6B7280] font-Outfit">Last updated</p>
-            <p className="text-base text-[#000] font-Outfit">Today, 2:30 PM</p>
+          <div className=" px-6 pb-6">
+            <div className=" flex justify-between items-center border-t pt-5 ">
+              <p className="text-sm text-[#4B5563] font-normal font-Inter">
+                Last updated
+              </p>
+              <p className="text-sm text-[#111827] font-Inter">
+                Today, 2:30 PM
+              </p>
+            </div>
           </div>
 
           {/* Lab Results Chart */}
-          <div className="bg-white rounded-lg p-6 mb-8">
-            <div className="flex items-center mb-8">
-              <MdShowChart className="w-6 h-6 text-[#2D5BFF] mr-3" />
-              <h3 className="font-normal text-lg text-[#000] font-Outfit">
+          <div className="bg-white rounded-lg p-6 mb-8 ">
+            <div className="flex items-center mb-8 gap-2">
+              <img className=" w-6 h-6" src={icontwenty} alt="" />
+              <h3 className="font-semibold text-xl text-[#000] font-Outfit">
                 Lab Results
               </h3>
             </div>
 
             <div>
-              <h4 className="font-normal text-base text-[#000] mb-6 font-Outfit">
+              <h4 className="font-normal text-sm text-[#374151] font-Outfit">
                 Glucose Levels (mg/dL)
               </h4>
               <div className="relative">
@@ -265,16 +273,16 @@ const LabResultsPage: React.FC = () => {
                 className="flex items-center justify-between py-4"
               >
                 <div>
-                  <h4 className="font-normal text-base text-[#000] mb-1 font-Outfit">
+                  <h4 className="font-normal text-base text-[#111827] mb-1 font-Outfit">
                     {result.name}
                   </h4>
-                  <p className="text-sm text-[#6B7280] font-Outfit">
+                  <p className="text-sm text-[#4B5563] font-Inter">
                     {result.date}
                   </p>
                 </div>
                 <div className="flex items-center space-x-4">
                   <span
-                    className={`inline-flex px-3 py-1 rounded-full text-sm font-normal font-Outfit ${getStatusColor(
+                    className={`inline-flex px-3 py-1 rounded-full text-sm font-normal font-Inter ${getStatusColor(
                       result.status
                     )}`}
                   >
@@ -284,7 +292,7 @@ const LabResultsPage: React.FC = () => {
                     onClick={() => handleDownload(result.name)}
                     className="p-2 text-[#2D5BFF] hover:bg-blue-50 rounded-lg transition-colors"
                   >
-                    <MdDownload className="w-5 h-5" />
+                    <IoDownloadOutline className="w-5 h-5" />
                   </button>
                 </div>
               </div>
