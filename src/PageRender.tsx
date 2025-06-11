@@ -78,6 +78,7 @@ const PageRender = () => {
     "e-prescriptions",
     "new-prescription",
     "your-prescriptions",
+    "lab-test",
   ];
 
   const doctorPages = [

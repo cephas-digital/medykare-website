@@ -54,7 +54,7 @@ const Sidebar: React.FC = () => {
     },
     {
       name: "Lab Test",
-      path: "/lab-test",
+      path: "/patient/lab-test",
       activeImage: sideiconfive,
       inactiveImage: sideiconfive,
     },
