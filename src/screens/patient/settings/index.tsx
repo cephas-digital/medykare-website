@@ -1,5 +1,3 @@
-"use client";
-
 import type React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -9,8 +7,8 @@ import {
   MdLock,
   MdLocalHospital,
   MdCreditCard,
-  MdHelpOutline,
 } from "react-icons/md";
+import { IoMdHelpCircle } from "react-icons/io";
 import PatientPageTitle from "../../../components/patient/patient-page-title";
 import FormInput from "../../../components/ui/FormInput";
 import DashboardLayout from "../../../components/layouts/dashboard-layout";
@@ -66,7 +64,7 @@ const SettingsPage: React.FC = () => {
     {
       id: "help-support",
       label: "Help & Support",
-      icon: MdHelpOutline,
+      icon: IoMdHelpCircle,
       route: "/patient/help-support",
     },
   ];
@@ -94,42 +92,23 @@ const SettingsPage: React.FC = () => {
             Settings
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:flex  gap-8 ">
             {/* Left Column - Profile & Menu */}
-            <div className="space-y-6">
+            <div className="space-y-6 lg:w-[20%]">
               {/* Profile Section */}
-              <div className="text-center">
-                <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                <h3 className="font-normal text-lg text-[#000] font-Outfit">
+              <div className=" text-center">
+                <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto  mb-4"></div>
+                <h3 className="font-semibold text-base text-[#000] font-Outfit">
                   Sarah O. Adewunmi
                 </h3>
-                <p className="text-sm text-gray-600 font-Outfit">
+                <p className="text-sm text-[#4B5563] font-normal font-Inter">
                   sarah@example.com
                 </p>
-              </div>
-
-              {/* Menu Items */}
-              <div className="space-y-2">
-                {menuItems.map((item) => {
-                  const IconComponent = item.icon;
-                  return (
-                    <button
-                      key={item.id}
-                      onClick={() => handleMenuClick(item.route)}
-                      className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-50 rounded-lg transition-colors"
-                    >
-                      <IconComponent className="w-5 h-5 text-[#2D5BFF]" />
-                      <span className="font-Outfit text-[#000]">
-                        {item.label}
-                      </span>
-                    </button>
-                  );
-                })}
               </div>
             </div>
 
             {/* Right Column - Form */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-6 lg:w-[80%]">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <FormInput
                   label=""
@@ -165,6 +144,24 @@ const SettingsPage: React.FC = () => {
                 />
               </div>
             </div>
+          </div>
+          {/* Menu Items */}
+          <div className="space-y-2 mt-5">
+            {menuItems.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleMenuClick(item.route)}
+                  className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-50 rounded-lg transition-colors"
+                >
+                  <IconComponent className="w-5 h-5 text-[#2D5BFF]" />
+                  <span className="font-Inter font-normal text-base text-[#000]">
+                    {item.label}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
