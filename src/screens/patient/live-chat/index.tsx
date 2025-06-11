@@ -4,6 +4,7 @@ import { MdSend, MdEmojiEmotions, MdAdd } from "react-icons/md";
 import PatientPageTitle from "../../../components/patient/patient-page-title";
 import DashboardLayout from "../../../components/layouts/dashboard-layout";
 import PatientHeader from "../../../components/patient/header";
+import { HiOutlineEmojiHappy } from "react-icons/hi";
 
 interface ChatMessage {
   id: string;
@@ -75,20 +76,23 @@ const LiveChatPage: React.FC = () => {
           </h2>
 
           {/* Chat Header */}
-          <div className="bg-white rounded-lg border border-gray-200 mb-6">
-            <div className="p-4 border-b border-gray-200">
+          <div className="bg-white rounded-lg mb-6">
+            <div className="p-4 ">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gray-200 rounded-lg"></div>
                 <div>
-                  <h3 className="font-normal text-base text-[#000] font-Outfit">
+                  <h3 className="font-normal text-sm text-[#45464E] font-Outfit">
                     Medications
                   </h3>
-                  <p className="text-sm text-gray-600 font-Outfit">
-                    ₦700,000.00
-                  </p>
-                  <p className="text-xs text-[#2D5BFF] font-Outfit">
-                    12 related questions
-                  </p>
+                  <div className=" flex items-center justify-between gap-32">
+                    <p className="text-sm text-[#33343A] font-medium font-Outfit">
+                      ₦700,000.00
+                    </p>
+                    <p className="text-xs text-[#A6A8B1] font-Outfit">
+                      <span className=" text-[#2D5BFF]">12</span> related
+                      questions
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,7 +108,7 @@ const LiveChatPage: React.FC = () => {
                 >
                   <div className="max-w-xs lg:max-w-md">
                     <div
-                      className={`p-4 rounded-lg ${
+                      className={`p-4 rounded-t-lg rounded-ee-lg ${
                         msg.sender === "user"
                           ? "bg-[#2D5BFF] text-white"
                           : "bg-gray-100 text-[#000]"
@@ -149,9 +153,9 @@ const LiveChatPage: React.FC = () => {
             </div>
 
             {/* Chat Input */}
-            <div className="p-4 border-t border-gray-200">
+            <div className="px-2 py-1  border border-gray-300 rounded-lg">
               <div className="flex items-center space-x-3">
-                <button className="p-2 text-gray-400 hover:text-gray-600">
+                <button className="p-2 text-[#1C1D22] bg-[#E2F6FF] rounded-lg hover:text-gray-600">
                   <MdAdd className="w-5 h-5" />
                 </button>
                 <div className="flex-1 relative">
@@ -161,18 +165,24 @@ const LiveChatPage: React.FC = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Your message"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2D5BFF] focus:border-transparent font-Outfit"
+                    className="w-full px-4 py-3 rounded-lg text-base font-normal text-[#6E7079] focus:outline-none focus:ring-2 focus:ring-[#2D5BFF] focus:border-transparent font-Outfit"
                   />
                 </div>
-                <button className="p-2 text-gray-400 hover:text-gray-600">
-                  <MdEmojiEmotions className="w-5 h-5" />
+                <button className="p-2 text-[#2D5BFF] hover:text-gray-600">
+                  <HiOutlineEmojiHappy className="w-5 h-5" />
                 </button>
-                <button
+                <div
                   onClick={handleSendMessage}
-                  className="p-2 bg-[#2D5BFF] text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  className="py-2 px-4 bg-[#E2F6FF] flex items-center gap-2 text-white cursor-pointer rounded-lg hover:bg-blue-600 transition-colors"
                 >
-                  <MdSend className="w-5 h-5" />
-                </button>
+                  <p className=" text-base font-Outfit text-[#1C1D22]">Send</p>
+                  <MdSend className="w-5 h-5 text-[#1C1D22]" />
+                </div>
+                {/* <button
+                
+                >
+                  
+                </button> */}
               </div>
             </div>
           </div>
