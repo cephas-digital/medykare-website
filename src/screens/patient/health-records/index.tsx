@@ -1,4 +1,3 @@
-
 import type React from "react";
 import PatientPageTitle from "../../../components/patient/patient-page-title";
 import DashboardLayout from "../../../components/layouts/dashboard-layout";
@@ -81,7 +80,7 @@ const HealthRecordsPage: React.FC = () => {
         <PatientPageTitle breadcrumb="Account Settings" title="" />
 
         <div className="max-w-6xl">
-          <h2 className="text-2xl font-normal text-[#000] mb-8 font-Outfit">
+          <h2 className="text-3xl font-normal text-[#000] mb-4  font-Outfit">
             Health Records
           </h2>
 
@@ -90,24 +89,24 @@ const HealthRecordsPage: React.FC = () => {
             <div className="space-y-8">
               {/* Recent Visits */}
               <div>
-                <h3 className="text-lg font-normal text-[#000] mb-6 font-Outfit">
+                <h3 className="text-sm  font-normal text-[#374151] mb-6 font-Outfit">
                   Recent Visits
                 </h3>
                 <div className="space-y-4">
                   {recentVisits.map((visit, index) => (
                     <div
                       key={index}
-                      className="flex justify-between items-start"
+                      className="flex justify-between items-start bg-[#F9FAFB] p-3 rounded-md"
                     >
                       <div>
-                        <p className="font-normal text-base text-[#000] font-Outfit">
+                        <p className="font-normal text-base text-[#111827] font-Outfit">
                           {visit.type}
                         </p>
-                        <p className="text-sm text-gray-600 font-Outfit">
+                        <p className="text-sm font-normal font-Inter text-[#4B5563]">
                           {visit.doctor}
                         </p>
                       </div>
-                      <p className="text-sm text-gray-600 font-Outfit">
+                      <p className="text-sm font-normal font-Inter text-[#4B5563]">
                         {visit.date}
                       </p>
                     </div>
@@ -117,16 +116,16 @@ const HealthRecordsPage: React.FC = () => {
 
               {/* Vital Signs */}
               <div>
-                <h3 className="text-lg font-normal text-[#000] mb-6 font-Outfit">
+                <h3 className="text-sm  font-normal text-[#374151] mb-6 font-Outfit">
                   Vital Signs
                 </h3>
                 <div className="grid grid-cols-2 gap-6">
                   {vitalSigns.map((vital, index) => (
-                    <div key={index}>
-                      <p className="text-sm text-gray-600 font-Outfit mb-1">
+                    <div key={index} className="bg-[#F9FAFB] p-3 rounded-md">
+                      <p className="text-sm font-normal font-Inter text-[#4B5563] mb-1">
                         {vital.label}
                       </p>
-                      <p className="font-normal text-base text-[#000] font-Outfit">
+                      <p className="font-normal text-base text-[#111827] font-Outfit">
                         {vital.value}
                       </p>
                     </div>
@@ -136,7 +135,7 @@ const HealthRecordsPage: React.FC = () => {
 
               {/* Immunizations */}
               <div>
-                <h3 className="text-lg font-normal text-[#000] mb-6 font-Outfit">
+                <h3 className="text-sm  font-normal text-[#374151] mb-6 font-Outfit">
                   Immunizations
                 </h3>
                 <div className="space-y-4">
@@ -145,10 +144,10 @@ const HealthRecordsPage: React.FC = () => {
                       key={index}
                       className="flex justify-between items-center"
                     >
-                      <p className="font-normal text-base text-[#000] font-Outfit">
+                      <p className="font-normal text-sm text-[#111827] font-Inter">
                         {immunization.name}
                       </p>
-                      <p className="text-sm text-gray-600 font-Outfit">
+                      <p className="text-sm font-normal font-Inter text-[#4B5563]">
                         {immunization.date}
                       </p>
                     </div>
@@ -159,21 +158,24 @@ const HealthRecordsPage: React.FC = () => {
 
             {/* Right Column */}
             <div>
-              <h3 className="text-lg font-normal text-[#000] mb-6 font-Outfit">
+              <h3 className="text-sm  font-normal text-[#374151] mb-6 font-Outfit">
                 Recent Visits
               </h3>
               <div className="space-y-4">
                 {[...recentVisits, ...additionalVisits].map((visit, index) => (
-                  <div key={index} className="flex justify-between items-start">
+                  <div
+                    key={index}
+                    className="flex justify-between items-start bg-[#F9FAFB] p-3 rounded-md"
+                  >
                     <div>
-                      <p className="font-normal text-base text-[#000] font-Outfit">
+                      <p className="font-normal text-base text-[#111827] font-Outfit">
                         {visit.type}
                       </p>
-                      <p className="text-sm text-gray-600 font-Outfit">
+                      <p className="text-sm font-normal font-Inter text-[#4B5563]">
                         {visit.doctor}
                       </p>
                     </div>
-                    <p className="text-sm text-gray-600 font-Outfit">
+                    <p className="text-sm font-normal font-Inter text-[#4B5563]">
                       {visit.date}
                     </p>
                   </div>

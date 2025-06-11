@@ -84,6 +84,9 @@ const PageRender = () => {
     "settings",
     "my-profile",
     "health-records",
+    "privacy-settings",
+    "help-support",
+    "live-chat",
   ];
 
   const doctorPages = [
