@@ -81,6 +81,7 @@ const PageRender = () => {
     "lab-test",
     "nearby-laboratories",
     "lab-results",
+    "settings",
   ];
 
   const doctorPages = [
