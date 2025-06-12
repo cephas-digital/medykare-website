@@ -1,7 +1,7 @@
 import type React from "react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { MdLogout, MdMenu, MdClose } from "react-icons/md";
+import { MdMenu, MdClose } from "react-icons/md";
 import { DashboardLogo } from "./logo";
 import sideimgone from "../../assets/images/sideimgone.png";
 import sideimgtwo from "../../assets/images/sideimgtwo.png";
@@ -12,6 +12,7 @@ import sideiconsix from "../../assets/images/sideiconsix.png";
 import sideiconseven from "../../assets/images/sideiconseven.png";
 import sideiconeight from "../../assets/images/sideiconeight.png";
 import sideiconnine from "../../assets/images/sideiconnine.png";
+import { IoMdLogOut } from "react-icons/io";
 
 interface MenuItem {
   name: string;
@@ -179,9 +180,9 @@ const Sidebar: React.FC = () => {
 
           {/* Logout Button - Always full width */}
           <div className="absolute bottom-6 left-6 right-6">
-            <button className="flex items-center gap-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-lg transition-colors w-full">
-              <MdLogout className="text-xl flex-shrink-0" />
-              <span className="font-medium">Log Out</span>
+            <button className="flex items-center gap-3 px-4 py-3 text-[#FF0A0A] hover:bg-red-50 rounded-lg transition-colors w-full">
+              <IoMdLogOut className="text-xl flex-shrink-0" />
+              <span className=" font-Outfit font-normal text-sm">Log Out</span>
             </button>
           </div>
         </div>
