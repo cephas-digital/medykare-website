@@ -171,7 +171,7 @@ const NotificationsPage: React.FC = () => {
             Notifications
           </h2>
 
-          {/* Filter Tabs */}
+        
           <div className="flex space-x-1 mb-8  p-1 rounded-lg w-fit">
             {filterTabs.map((tab) => (
               <button
