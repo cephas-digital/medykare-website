@@ -1,8 +1,10 @@
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { MdNotifications, MdSearch } from "react-icons/md";
 import userimg from "../../assets/images/userimg.png";
+import { useNavigate } from "react-router";
 
 const PatientHeader = () => {
+  const navigate = useNavigate();
   return (
     <div className="sticky top-0 z-10 bg-white pt-5 pb-4 px-6 ">
       <div className="flex justify-between items-center">
@@ -23,7 +25,10 @@ const PatientHeader = () => {
               className="pl-10 pr-4 py-2 font-Inter text-sm text-[#9CA3AF] placeholder:font-Inter font-normal placeholder:font-normal rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <div className="relative">
+          <div
+            onClick={() => navigate("/patient/notifications")}
+            className="relative cursor-pointer"
+          >
             <IoMdNotificationsOutline className="text-2xl text-gray-600 cursor-pointer" />
             <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
           </div>

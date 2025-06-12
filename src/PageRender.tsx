@@ -87,6 +87,8 @@ const PageRender = () => {
     "privacy-settings",
     "help-support",
     "live-chat",
+    "notifications",
+    "notification-detail",
   ];
 
   const doctorPages = [
