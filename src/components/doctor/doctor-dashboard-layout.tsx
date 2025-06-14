@@ -1,12 +1,14 @@
 import type React from "react";
 import { useState, useEffect } from "react";
-import Sidebar from "./sidebar";
+import DoctorSidebar from "./doctor-sidebar";
 
-interface DashboardLayoutProps {
+interface DoctorDashboardLayoutProps {
   children: React.ReactNode;
 }
 
-const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
+const DoctorDashboardLayout: React.FC<DoctorDashboardLayoutProps> = ({
+  children,
+}) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,8 +22,8 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="flex min-h-screen bg-[#fff]">
-      <Sidebar />
+    <div className="flex min-h-screen bg-[#F8FAFC]">
+      <DoctorSidebar />
       <main
         className={`flex-1 ${
           isMobile ? "ml-0 pt-16" : "ml-64" // Fixed margin for sidebar on desktop
@@ -35,4 +37,4 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   );
 };
 
-export default DashboardLayout;
+export default DoctorDashboardLayout;

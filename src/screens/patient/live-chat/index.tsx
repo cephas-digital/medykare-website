@@ -5,6 +5,7 @@ import PatientPageTitle from "../../../components/patient/patient-page-title";
 import DashboardLayout from "../../../components/layouts/dashboard-layout";
 import PatientHeader from "../../../components/patient/header";
 import { HiOutlineEmojiHappy } from "react-icons/hi";
+import { BsSendFill } from "react-icons/bs";
 
 interface ChatMessage {
   id: string;
@@ -176,7 +177,7 @@ const LiveChatPage: React.FC = () => {
                   className="py-2 px-4 bg-[#E2F6FF] flex items-center gap-2 text-white cursor-pointer rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   <p className=" text-base font-Outfit text-[#1C1D22]">Send</p>
-                  <MdSend className="w-5 h-5 text-[#1C1D22]" />
+                  <BsSendFill className="w-5 h-5 text-[#1C1D22]" />
                 </div>
                 {/* <button
                 

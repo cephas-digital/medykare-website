@@ -1,5 +1,6 @@
 import type React from "react";
 import { FaSearch } from "react-icons/fa";
+import { MdSearch } from "react-icons/md";
 
 interface InputProps {
   placeholder?: string;
@@ -86,5 +87,25 @@ export const TextArea = ({
       rows={4}
       className={`w-full px-4 py-3 text-gray-700 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 focus:border-transparent placeholder-gray-400 resize-vertical ${className}`}
     />
+  );
+};
+
+export const DoctorSearchInput = ({
+  placeholder = "Search patients",
+  value,
+  onChange,
+  className = "",
+}: InputProps) => {
+  return (
+    <div className={`relative mb-6 ${className}`}>
+      <MdSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+      <input
+        type="text"
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        className="w-full pl-10 pr-4 py-3 text-[#4F7396] bg-[#E8EDF2] text-base font-normal border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2D5BFF] focus:border-transparent font-Outfit"
+      />
+    </div>
   );
 };
