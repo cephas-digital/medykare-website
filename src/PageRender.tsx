@@ -1,3 +1,5 @@
+"use client";
+
 import { createElement } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -103,8 +105,7 @@ const PageRender = () => {
     "billing",
     "settings",
     "earnings",
-    "add-money",
-    "add-card",
+    "notifications",
   ];
 
   // Special handling for earnings sub-routes
@@ -114,6 +115,9 @@ const PageRender = () => {
     "withdraw",
     "add-account",
   ];
+
+  // Special handling for prescription sub-routes
+  const prescriptionSubRoutes = ["new"];
 
   let possiblePaths: string[] = [];
 
@@ -147,17 +151,53 @@ const PageRender = () => {
       }
     }
   }
-  // Handle doctor routes with special earnings handling
+  // Handle doctor routes with special handling for sub-routes
   else if (page === "doctor" && id && doctorPages.includes(id)) {
     if (step) {
       // Special handling for earnings sub-routes
       if (id === "earnings" && earningsSubRoutes.includes(step)) {
+        if (step === "add-money") {
+          // For add-money, prioritize [id].tsx first, then direct file
+          possiblePaths = [
+            `${page}/${id}/[id]`, // Try dynamic route first for add-money
+            `${page}/${id}/${step}`, // Then try direct file
+            `${page}/${id}/index`,
+          ];
+        } else {
+          // For other earnings routes like add-card, prioritize direct files
+          possiblePaths = [
+            `${page}/${id}/${step}`, // Try direct file first
+            `${page}/${id}/[id]`, // Then try dynamic route
+            `${page}/${id}/index`,
+          ];
+        }
+      }
+      // Special handling for prescription sub-routes
+      else if (id === "prescriptions" && prescriptionSubRoutes.includes(step)) {
         possiblePaths = [
-          `${page}/${id}/${step}`, // Try direct file first (e.g., doctor/earnings/add-card)
-          `${page}/${id}/[id]`, // Then try dynamic route (e.g., doctor/earnings/[id])
+          `${page}/${id}/${step}`, // Try direct file first (e.g., doctor/prescriptions/new)
+          `${page}/${id}/[id]`, // Then try dynamic route (e.g., doctor/prescriptions/[id])
           `${page}/${id}/index`,
         ];
-      } else {
+      }
+      // Special handling for appointments with patient IDs
+      else if (id === "appointments") {
+        possiblePaths = [
+          `${page}/${id}/[id]`, // Try dynamic route for appointment details
+          `${page}/${id}/${step}`, // Then try direct file
+          `${page}/${id}/index`,
+        ];
+      }
+      // Special handling for patients with patient IDs
+      else if (id === "patients") {
+        possiblePaths = [
+          `${page}/${id}/[id]`, // Try dynamic route for patient details
+          `${page}/${id}/${step}`, // Then try direct file
+          `${page}/${id}/index`,
+        ];
+      }
+      // Default handling for other doctor sub-routes
+      else {
         possiblePaths = [
           `${page}/${id}/[id]`,
           `${page}/${id}/index`,
@@ -314,6 +354,17 @@ export default PageRender;
 //     "earnings",
 //     "add-money",
 //     "add-card",
+//     "notifications",
+//     "prescriptions",
+//     "new",
+//   ];
+
+//   // Special handling for earnings sub-routes
+//   const earningsSubRoutes = [
+//     "add-money",
+//     "add-card",
+//     "withdraw",
+//     "add-account",
 //   ];
 
 //   let possiblePaths: string[] = [];
@@ -348,14 +399,23 @@ export default PageRender;
 //       }
 //     }
 //   }
-//   // Handle doctor routes
+//   // Handle doctor routes with special earnings handling
 //   else if (page === "doctor" && id && doctorPages.includes(id)) {
 //     if (step) {
-//       possiblePaths = [
-//         `${page}/${id}/[id]`,
-//         `${page}/${id}/index`,
-//         `${page}/[id]`,
-//       ];
+//       // Special handling for earnings sub-routes
+//       if (id === "earnings" && earningsSubRoutes.includes(step)) {
+//         possiblePaths = [
+//           `${page}/${id}/${step}`, // Try direct file first (e.g., doctor/earnings/add-card)
+//           `${page}/${id}/[id]`, // Then try dynamic route (e.g., doctor/earnings/[id])
+//           `${page}/${id}/index`,
+//         ];
+//       } else {
+//         possiblePaths = [
+//           `${page}/${id}/[id]`,
+//           `${page}/${id}/index`,
+//           `${page}/[id]`,
+//         ];
+//       }
 //     } else {
 //       const isNumeric = /^\d+$/.test(id);
 //       const isUUID =

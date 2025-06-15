@@ -109,7 +109,7 @@ const DoctorSidebar: React.FC = () => {
       {isMobile && (
         <button
           onClick={toggleMobileSidebar}
-          className="fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg border"
+          className="fixed top-4 left-4 z-50 p-2 bg-[#F7FAFC]  "
         >
           {isOpen ? (
             <MdClose className="text-xl" />
@@ -135,12 +135,12 @@ const DoctorSidebar: React.FC = () => {
                 isOpen ? "translate-x-0" : "-translate-x-full"
               }`
             : "fixed left-0 top-0 h-full"
-        } w-64 bg-white shadow-lg border-r border-gray-200`}
+        } w-64 bg-[#F7FAFC]  `}
       >
         <div className="p-6 flex flex-col h-full">
           {/* Doctor Profile */}
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden">
+            <div className="w-10 h-10 rounded-full bg-[#F7FAFC] overflow-hidden">
               <img
                 src={dbuser}
                 alt="Doctor profile"
@@ -171,7 +171,7 @@ const DoctorSidebar: React.FC = () => {
                   key={item.path}
                   to={item.path}
                   onClick={closeMobileSidebar}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+                  className={`flex items-center gap-3 px-4 py-3  transition-colors ${
                     active
                       ? "bg-[#2D5BFF] text-white"
                       : "text-[#1B1B1B] hover:bg-gray-50"
